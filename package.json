@@ -1,0 +1,17 @@
+{
+    "name": "api-repo",
+    "version": "1.0.0",
+    "main": "server.js",
+    "scripts": {
+        "dev": "NODE_ENV=development node server.js",
+        "start": "NODE_ENV=production node server.js"
+    },
+    "dependencies": {
+        "axios": "^1.7.7",
+        "clone": "^2.1.2",
+        "json-server": "^0.17.4"
+    },
+    "description": "",
+    "author": "",
+    "license": "ISC"
+}
