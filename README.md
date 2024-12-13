@@ -23,6 +23,8 @@ http://localhost:3000/
 5. Add table in `db.json`
 6. API Doc
    ```
-   [GET] /api/users
-   
+    [GET] /api/users
+    [GET] /api/user/1
+    
+
    ```
