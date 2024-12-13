@@ -21,3 +21,8 @@ http://localhost:3000/
 ```
 ![alt text](/images/image.png)
 5. Add table in `db.json`
+6. API Doc
+   ```
+   [GET] /api/users
+   
+   ```
