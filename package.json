@@ -9,7 +9,9 @@
     "dependencies": {
         "axios": "^1.7.7",
         "clone": "^2.1.2",
-        "json-server": "^0.17.4"
+        "fs": "^0.0.1-security",
+        "json-server": "^0.17.4",
+        "path": "^0.12.7"
     },
     "description": "",
     "author": "",

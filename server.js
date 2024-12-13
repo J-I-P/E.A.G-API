@@ -1,6 +1,8 @@
 const jsonServer = require('json-server')
 const clone = require('clone')
 const data = require('./db.json')
+const fs = require('fs')
+const path = require('path')
 
 const isProductionEnv = process.env.NODE_ENV === 'production';
 const server = jsonServer.create()
@@ -9,7 +11,14 @@ const server = jsonServer.create()
 // const router = jsonServer.router(isProductionEnv ? clone(data) : 'db.json', {
 //     _isFake: isProductionEnv
 // })
-const router = jsonServer.router('db.json')
+
+
+const filePath = path.join('db.json')
+const data = fs.readFileSync(filePath, "utf-8")
+const db = JSON.parse(data)
+
+
+const router = jsonServer.router(db)
 const middlewares = jsonServer.defaults()
 
 server.use(middlewares)
