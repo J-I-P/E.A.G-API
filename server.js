@@ -19,6 +19,17 @@ server.use(middlewares)
 //     next()
 // })
 
+const API_KEY = process.env.APIKEY;
+
+server.use((req, res, next) => {
+    const apiKey = req.headers['api-key']; 
+    if (apiKey === API_KEY) {
+      next(); 
+    } else {
+      res.status(401).json({ error: 'Unauthorized: Invalid API Key' }); 
+    }
+  });
+
 server.use(jsonServer.rewriter({
     '/api/*': '/$1',
     '/blog/:resource/:id/show': '/:resource/:id'
