@@ -5,28 +5,44 @@
       "name": "阿鼠",
       "email": "alice@example.com", 
       "password": "hashed_password", 
-      "role": "visitor" 
+      "role": "visitor",
+      "phone": "0912-123-456",
+      "address": "",
+      "birth": "1990-01-01",
+      "image":""
     },
     {
       "id": 2,
       "name": "Harry",
       "email": "alice@example.com", 
       "password": "hashed_password",
-      "role":"visitor"
+      "role":"visitor",
+      "phone": "0912-123-456",
+      "address": "",
+      "birth": "1990-01-01",
+      "image":""
     },
     {
       "id": 3,
       "name": "1457",
       "email": "alice@example.com", 
       "password": "hashed_password",
-      "role":"visitor"
+      "role":"visitor",
+      "phone": "0912-123-456",
+      "address": "",
+      "birth": "1990-01-01",
+      "image":""
     },
     {
       "id": 4,
       "name": "Nicole",
       "email": "alice@example.com", 
       "password": "hashed_password",
-      "role":"visitor"
+      "role":"visitor",
+      "phone": "0912-123-456",
+      "address": "",
+      "birth": "1990-01-01",
+      "image":""
     }
   ],
   "exhibitions": [
