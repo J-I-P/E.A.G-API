@@ -42,22 +42,61 @@ server.use((req, res, next) => {
 
 
 server.get('/api/exhibitions', (req, res) => {
-  const db = router.db; // 獲取 JSON Server 的資料庫
-  const exhibitions = db.get('exhibitions').value(); // 獲取所有展覽數據
-  const queryTags = req.query.tags ? req.query.tags.split(',') : []; // 解析查詢參數中的 tags，並轉為陣列
+  const db = router.db;
+  let exhibitions = db.get('exhibitions').value();
 
-  if (queryTags.length === 0) {
-      // 如果沒有提供 tags，返回所有展覽
-      return res.json(exhibitions);
+  const queryTags = req.query.tags ? req.query.tags.split(',') : [];
+  if (queryTags.length > 0) {
+      exhibitions = exhibitions.filter(exhibition =>
+          exhibition.tags.some(tag => queryTags.includes(tag))
+      );
   }
 
-  // 篩選包含任一查詢標籤的展覽
-  const filteredExhibitions = exhibitions.filter(exhibition =>
-      exhibition.tags.some(tag => queryTags.includes(tag))
-  );
+  if (req.query.regionId) {
+      exhibitions = exhibitions.filter(exhibition =>
+          exhibition.regionId === Number(req.query.regionId)
+      );
+  }
 
-  res.json(filteredExhibitions);
+  if (req.query.organizerId) {
+      exhibitions = exhibitions.filter(exhibition =>
+          exhibition.organizerId === Number(req.query.organizerId)
+      );
+  }
+
+  if (req.query.featured) {
+      exhibitions = exhibitions.filter(exhibition =>
+          exhibition.featured === Boolean(req.query.featured)
+      );
+  }
+
+  const sortKey = req.query._sort;
+  const sortOrder = req.query._order === 'desc' ? -1 : 1;
+  if (sortKey) {
+      exhibitions = exhibitions.sort((a, b) => {
+          const valueA = a[sortKey];
+          const valueB = b[sortKey];
+          if (valueA < valueB) return -1 * sortOrder;
+          if (valueA > valueB) return 1 * sortOrder;
+          return 0;
+      });
+  }
+
+  const page = parseInt(req.query._page, 10) || 1;
+  const limit = parseInt(req.query._limit, 10) || exhibitions.length;
+  const startIndex = (page - 1) * limit;
+  const endIndex = startIndex + limit;
+
+  const paginatedExhibitions = exhibitions.slice(startIndex, endIndex);
+
+  res.json({
+      data: paginatedExhibitions,
+      total: exhibitions.length,
+      page,
+      limit,
+  });
 });
+
 
 server.use(jsonServer.rewriter({
     '/api/*': '/$1',
