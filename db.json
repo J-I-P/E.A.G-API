@@ -205,7 +205,8 @@
     }
   ],
   "favorites": [
-    { "id": 1, "userId": 1, "exhibitionId": 1 }
+    { "id": 1, "userId": 1, "exhibitionId": 1 },
+    { "id": 2, "userId": 2, "exhibitionId": 1 }
   ],
   "registrations": [
     { "id": 1, "userId": 1, "exhibitionId": 1, "status": "confirmed" }
