@@ -36,13 +36,14 @@
     {
       "id": 4,
       "name": "Nicole",
-      "email": "alice@example.com", 
-      "password": "hashed_password",
+      "email": "nicole@example.com", 
+      "password": "nicole_password",
       "role":"visitor",
       "phone": "0912-123-456",
       "address": "",
       "birth": "1990-01-01",
-      "image":""
+      "image":"",
+      "membershipsId": 2
     }
   ],
   "exhibitions": [
@@ -57,7 +58,9 @@
       "organizerId": 1,
       "tags": ["藝術", "國際"],
       "url": "https://example.com/artexpo",
-      "guests": []
+      "guests": [],
+      "views": 0,
+      "likes": 0
     },
     {
       "id": 2,
@@ -70,7 +73,9 @@
       "organizerId": 2,
       "tags": ["科技", "創新"],
       "url": "https://example.com/techexpo",
-      "guests": []
+      "guests": [],
+      "views": 0,
+      "likes": 0
     },
     {
       "id": 3,
@@ -83,7 +88,9 @@
       "organizerId": 3,
       "tags": ["美食", "藝術"],
       "url": "https://example.com/culinaryfest",
-      "guests": []
+      "guests": [],
+      "views": 0,
+      "likes": 0
     },
     {
       "id": 4,
@@ -96,7 +103,9 @@
       "organizerId": 4,
       "tags": ["歷史"],
       "url": "https://example.com/historyexpo",
-      "guests": []
+      "guests": [],
+      "views": 0,
+      "likes": 0
     },
     {
       "id": 5,
@@ -109,7 +118,9 @@
       "organizerId": 5,
       "tags": ["攝影"],
       "url": "https://example.com/photographyshowcase",
-      "guests": []
+      "guests": [],
+      "views": 0,
+      "likes": 0
     },
     {
       "id": 6,
@@ -122,7 +133,9 @@
       "organizerId": 6,
       "tags": ["設計", "會議"],
       "url": "https://example.com/designsummit",
-      "guests": []
+      "guests": [],
+      "views": 0,
+      "likes": 0
     },
     {
       "id": 7,
@@ -133,7 +146,9 @@
       "address": "台北市內湖區",
       "tags": ["遊戲", "電競"],
       "url": "https://example.com/gamingshowcase",
-      "guests": []
+      "guests": [],
+      "views": 0,
+      "likes": 0
     },
     {
       "id": 8,
@@ -144,7 +159,9 @@
       "address": "新竹市東區",
       "tags": ["文學"],
       "url": "https://example.com/literaryfest",
-      "guests": []
+      "guests": [],
+      "views": 0,
+      "likes": 0
     },
     {
       "id": 9,
@@ -155,7 +172,9 @@
       "address": "台中市南屯區",
       "tags": ["時尚"],
       "url": "https://example.com/fashionweek",
-      "guests": []
+      "guests": [],
+      "views": 0,
+      "likes": 0
     },
     {
       "id": 10,
@@ -166,7 +185,9 @@
       "address": "花蓮縣花蓮市",
       "tags": ["音樂", "節日"],
       "url": "https://example.com/musicfestival",
-      "guests": []
+      "guests": [],
+      "views": 0,
+      "likes": 0
     }
   ],
   "favorites": [
@@ -176,7 +197,9 @@
     { "id": 1, "userId": 1, "exhibitionId": 1, "status": "confirmed" }
   ],
   "memberships": [
-    { "id": 1, "userId": 1, "membership": "basic", "valid_until": "2025-12-31" }
+    { "id": 1, "userId": 1, "membership": "basic", "valid_until": "2025-12-31" },
+    { "id": 2, "userId": 4, "membership": "premium", "valid_until": "2026-12-31" }
+
   ],
   "regions": [
     {
@@ -229,101 +252,69 @@
     },
     {
       "id" : 13,
-      "name" : "高雄市",
-      "created_at" : "2025-01-07 03:43:00",
-      "updated_at" : "2025-01-07 03:43:00"
+      "name" : "高雄市"
     },
     {
       "id" : 14,
-      "name" : "臺南市",
-      "created_at" : "2025-01-07 03:43:00",
-      "updated_at" : "2025-01-07 03:43:00"
+      "name" : "臺南市"
     },
     {
       "id" : 15,
-      "name" : "嘉義市",
-      "created_at" : "2025-01-07 03:43:00",
-      "updated_at" : "2025-01-07 03:43:00"
+      "name" : "嘉義市"
     },
     {
       "id" : 16,
-      "name" : "嘉義縣",
-      "created_at" : "2025-01-07 03:43:00",
-      "updated_at" : "2025-01-07 03:43:00"
+      "name" : "嘉義縣"
     },
     {
       "id" : 17,
-      "name" : "屏東縣",
-      "created_at" : "2025-01-07 03:43:00",
-      "updated_at" : "2025-01-07 03:43:00"
+      "name" : "屏東縣"
     },
     {
       "id" : 18,
-      "name" : "澎湖縣",
-      "created_at" : "2025-01-07 03:43:00",
-      "updated_at" : "2025-01-07 03:43:00"
+      "name" : "澎湖縣"
     },
     {
       "id" : 19,
-      "name" : "花蓮縣",
-      "created_at" : "2025-01-07 03:43:00",
-      "updated_at" : "2025-01-07 03:43:00"
+      "name" : "花蓮縣"
     },
     {
       "id" : 20,
-      "name" : "臺東縣",
-      "created_at" : "2025-01-07 03:43:00",
-      "updated_at" : "2025-01-07 03:43:00"
+      "name" : "臺東縣"
     },
     {
       "id" : 21,
-      "name" : "金門縣",
-      "created_at" : "2025-01-07 03:43:00",
-      "updated_at" : "2025-01-07 03:43:00"
+      "name" : "金門縣"
     },
     {
       "id" : 22,
-      "name" : "連江縣",
-      "created_at" : "2025-01-07 03:43:00",
-      "updated_at" : "2025-01-07 03:43:00"
+      "name" : "連江縣"
     }
   ],
   "exhibitions_types": [
     {
       "id": 1,
-      "name": "藝文",
-      "created_at" : "2025-01-07 03:43:00",
-      "updated_at" : "2025-01-07 03:43:00"
+      "name": "藝文"
     },
     {
       "id": 2,
-      "name": "學習",
-      "created_at" : "2025-01-07 03:43:00",
-      "updated_at" : "2025-01-07 03:43:00"
+      "name": "學習"
     },
     {
       "id": 3,
-      "name": "漫畫",
-      "created_at" : "2025-01-07 03:43:00",
-      "updated_at" : "2025-01-07 03:43:00"
+      "name": "漫畫"
     },
     {
       "id": 4,
-      "name": "互動",
-      "created_at" : "2025-01-07 03:43:00",
-      "updated_at" : "2025-01-07 03:43:00"
+      "name": "互動"
     },
     {
       "id": 5,
-      "name": "資訊",
-      "created_at" : "2025-01-07 03:43:00",
-      "updated_at" : "2025-01-07 03:43:00"
+      "name": "資訊"
     },
     {
       "id": 6,
-      "name": "其他",
-      "created_at" : "2025-01-07 03:43:00",
-      "updated_at" : "2025-01-07 03:43:00"
+      "name": "其他"
     }
   ]
   
