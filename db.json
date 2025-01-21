@@ -51,16 +51,17 @@
       "id": 1,
       "title": "藝術博覽會",
       "description": "藝術博覽會是一場令人期待的國際盛會，匯聚了來自全球各地的知名藝術家、畫廊和收藏家。在這場活動中，參觀者將有機會欣賞到各種形式的藝術作品，包括繪畫、雕塑、攝影和數位藝術等多元媒材。不僅如此，博覽會還特別策劃了現場講座和工作坊，邀請藝術界的頂尖專家分享他們的創作理念與故事。活動地點設於台北市信義區，鄰近多個購物中心和美食餐廳，方便參觀者在欣賞藝術之餘，享受台北的都市魅力。無論您是藝術愛好者還是專業收藏家，這都是一次深入探索藝術世界的絕佳機會，讓您沉浸於創意與靈感之中。",
-      "start_date": "2025-01-01",
-      "end_date": "2025-01-10",
+      "start_date": "2025-11-01",
+      "end_date": "2025-11-10",
       "address": "台北市信義區",
       "regionId": 1,
       "organizerId": 1,
       "tags": ["藝術", "國際"],
       "url": "https://example.com/artexpo",
       "guests": [],
-      "views": 0,
-      "likes": 0
+      "views": 130,
+      "likes": 0,
+      "featured": true
     },
     {
       "id": 2,
@@ -74,8 +75,9 @@
       "tags": ["科技", "創新"],
       "url": "https://example.com/techexpo",
       "guests": [],
-      "views": 0,
-      "likes": 0
+      "views": 4000,
+      "likes": 0,
+      "featured": false
     },
     {
       "id": 3,
@@ -89,8 +91,9 @@
       "tags": ["美食", "藝術"],
       "url": "https://example.com/culinaryfest",
       "guests": [],
-      "views": 0,
-      "likes": 0
+      "views": 23,
+      "likes": 0,
+      "featured": false
     },
     {
       "id": 4,
@@ -104,8 +107,9 @@
       "tags": ["歷史"],
       "url": "https://example.com/historyexpo",
       "guests": [],
-      "views": 0,
-      "likes": 0
+      "views": 15,
+      "likes": 0,
+      "featured": false
     },
     {
       "id": 5,
@@ -119,8 +123,9 @@
       "tags": ["攝影"],
       "url": "https://example.com/photographyshowcase",
       "guests": [],
-      "views": 0,
-      "likes": 0
+      "views": 500,
+      "likes": 0,
+      "featured": false
     },
     {
       "id": 6,
@@ -134,8 +139,9 @@
       "tags": ["設計", "會議"],
       "url": "https://example.com/designsummit",
       "guests": [],
-      "views": 0,
-      "likes": 0
+      "views": 90,
+      "likes": 0,
+      "featured": false
     },
     {
       "id": 7,
@@ -144,11 +150,13 @@
       "start_date": "2025-07-15",
       "end_date": "2025-07-20",
       "address": "台北市內湖區",
+      "regionId": 1,
       "tags": ["遊戲", "電競"],
       "url": "https://example.com/gamingshowcase",
       "guests": [],
-      "views": 0,
-      "likes": 0
+      "views": 10000,
+      "likes": 0,
+      "featured": true
     },
     {
       "id": 8,
@@ -157,11 +165,13 @@
       "start_date": "2025-08-05",
       "end_date": "2025-08-10",
       "address": "新竹市東區",
+      "regionId": 4,
       "tags": ["文學"],
       "url": "https://example.com/literaryfest",
       "guests": [],
-      "views": 0,
-      "likes": 0
+      "views": 2,
+      "likes": 0,
+      "featured": true
     },
     {
       "id": 9,
@@ -170,11 +180,13 @@
       "start_date": "2025-09-15",
       "end_date": "2025-09-20",
       "address": "台中市南屯區",
+      "regionId": 8,
       "tags": ["時尚"],
       "url": "https://example.com/fashionweek",
       "guests": [],
-      "views": 0,
-      "likes": 0
+      "views": 90,
+      "likes": 0,
+      "featured": false
     },
     {
       "id": 10,
@@ -183,11 +195,13 @@
       "start_date": "2025-10-10",
       "end_date": "2025-10-15",
       "address": "花蓮縣花蓮市",
+      "regionId": 19,
       "tags": ["音樂", "節日"],
       "url": "https://example.com/musicfestival",
       "guests": [],
-      "views": 0,
-      "likes": 0
+      "views": 30,
+      "likes": 0,
+      "featured": true
     }
   ],
   "favorites": [
@@ -197,9 +211,12 @@
     { "id": 1, "userId": 1, "exhibitionId": 1, "status": "confirmed" }
   ],
   "memberships": [
-    { "id": 1, "userId": 1, "membership": "basic", "valid_until": "2025-12-31" },
-    { "id": 2, "userId": 4, "membership": "premium", "valid_until": "2026-12-31" }
-
+    { "id": 1, "userId": 1, "memberships_levelId": 1, "valid_until": "2025-12-31" },
+    { "id": 2, "userId": 4, "memberships_level": 2, "valid_until": "2026-12-31" }
+  ],
+  "memberships_level": [
+    { "id": 1, "membership": "basic"},
+    { "id": 2, "membership": "premium"}
   ],
   "regions": [
     {
