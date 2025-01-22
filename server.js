@@ -143,6 +143,22 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 			);
 	}
 
+    if (req.query.startDate || req.query.endDate) {
+        const startDate = req.query.startDate ? new Date(req.query.startDate) : null;
+        const endDate = req.query.endDate ? new Date(req.query.endDate) : null;
+        
+        exhibitions = exhibitions.filter(exhibition => {
+            const exhibitionStartDate = new Date(exhibition.start_date);
+            const exhibitionEndDate = new Date(exhibition.end_date);
+
+            const isOverlapping =
+                (!startDate || exhibitionEndDate >= startDate) &&
+                (!endDate || exhibitionStartDate <= endDate);
+
+            return isOverlapping;
+        });
+    }
+
     if (req.query.search) {
         const searchQuery = req.query.search; 
         console.log(searchQuery); 
