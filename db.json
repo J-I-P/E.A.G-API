@@ -9,7 +9,8 @@
       "phone": "0912-123-456",
       "address": "",
       "birth": "1990-01-01",
-      "image":""
+      "image":"",
+      "membershipsId": 4
     },
     {
       "id": 2,
@@ -20,7 +21,8 @@
       "phone": "0912-123-456",
       "address": "",
       "birth": "1990-01-01",
-      "image":""
+      "image":"",
+      "membershipsId": 3
     },
     {
       "id": 3,
@@ -31,7 +33,8 @@
       "phone": "0912-123-456",
       "address": "",
       "birth": "1990-01-01",
-      "image":""
+      "image":"",
+      "membershipsId": 2
     },
     {
       "id": 4,
@@ -43,7 +46,7 @@
       "address": "",
       "birth": "1990-01-01",
       "image":"",
-      "membershipsId": 2
+      "membershipsId": 1
     }
   ],
   "exhibitions": [
@@ -210,13 +213,20 @@
   "registrations": [
     { "id": 1, "userId": 1, "exhibitionId": 1, "status": "confirmed" }
   ],
+  "roles": [
+    { "id": 1, "role": "admin" },
+    { "id": 2, "role": "participant" },
+    { "id": 3, "role": "organizer" }
+  ],
   "memberships": [
     { "id": 1, "userId": 1, "memberships_levelId": 1, "valid_until": "2025-12-31" },
-    { "id": 2, "userId": 4, "memberships_level": 2, "valid_until": "2026-12-31" }
+    { "id": 2, "userId": 4, "memberships_levelId": 2, "valid_until": "2026-12-31" }
   ],
   "memberships_level": [
     { "id": 1, "membership": "basic"},
-    { "id": 2, "membership": "premium"}
+    { "id": 2, "membership": "mini"},
+    { "id": 3, "membership": "plus"},
+    { "id": 4, "membership": "pro"}
   ],
   "regions": [
     {
