@@ -10,6 +10,8 @@ const paginate = require('./middlewares/paginate.js');
 const express = require('express');
 
 const ECOIN_PER_DRAW = 30
+const API_BASE_URL = 'http://localhost:3000'
+
 
 
 const isProductionEnv = process.env.NODE_ENV === 'production';
@@ -217,8 +219,13 @@ server.post("/api/draw", async (req, res) => {
 	  }
   
 
-		const userResponse = await axios.get(`http://localhost:3000/users/${userId}`);
-		const user = userResponse.data;
+		const userResponse = await axios.get(`${API_BASE_URL}/api/users/${userId}`, {
+			headers: {
+			  'Authorization': `Bearer ${API_KEY}`
+			}
+		  });
+		console.log("userResponse:", userResponse);
+		  const user = userResponse.data;
 		if (!user) {
 			return res.status(404).json({ message: "使用者未找到" });
 		}
@@ -236,20 +243,22 @@ server.post("/api/draw", async (req, res) => {
 	  console.log("drawLimit:", drawLimit);
   
 
-	  const response = await axios.get("http://localhost:3000/gotcha_goods");
+	  const response = await axios.get(`${API_BASE_URL}/api/gotcha_goods`, {
+		headers: {
+		  'Authorization': `Bearer ${API_KEY}`
+		}
+	  });
 	  let prizes = response.data.filter((prize) => prize.stock > 0);
   
 	  if (prizes.length === 0) {
 		return res.status(400).json({ message: "所有獎品都已經抽完！" });
 	  }
   
-	  // 抽獎過程
 	  for (let i = 0; i < drawLimit; i++) {
-		// 隨機抽取一個獎品
+
 		const selectedPrize = prizes[Math.floor(Math.random() * prizes.length)];
-  
-		// 更新庫存
-		await axios.patch(`http://localhost:3000/gotcha_goods/${selectedPrize.id}`, {
+
+		await axios.patch(`${API_BASE_URL}/api/gotcha_goods/${selectedPrize.id}`, {
 		  stock: selectedPrize.stock - 1,
 		});
   
@@ -257,7 +266,7 @@ server.post("/api/draw", async (req, res) => {
 	  }
 
   const updatedTokens = userTokens - totalTokensNeeded;
-  await axios.patch(`http://localhost:3000/users/${userId}`, {
+  await axios.patch(`${API_BASE_URL}/api/users/${userId}`, {
 	e_coin: updatedTokens,
   });
 
