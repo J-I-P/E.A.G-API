@@ -221,7 +221,7 @@ server.post("/api/draw", async (req, res) => {
 
 		const userResponse = await axios.get(`${API_BASE_URL}/api/users/${userId}`, {
 			headers: {
-			  'Authorization': `Bearer ${API_KEY}`
+			  'api-key': API_KEY,
 			}
 		  });
 		console.log("userResponse:", userResponse);
@@ -245,7 +245,7 @@ server.post("/api/draw", async (req, res) => {
 
 	  const response = await axios.get(`${API_BASE_URL}/api/gotcha_goods`, {
 		headers: {
-		  'Authorization': `Bearer ${API_KEY}`
+		  'api-key': API_KEY,
 		}
 	  });
 	  let prizes = response.data.filter((prize) => prize.stock > 0);
@@ -260,7 +260,11 @@ server.post("/api/draw", async (req, res) => {
 
 		await axios.patch(`${API_BASE_URL}/api/gotcha_goods/${selectedPrize.id}`, {
 		  stock: selectedPrize.stock - 1,
-		});
+		},{
+			headers: {
+			  'api-key': API_KEY,
+			}
+		  });
   
 		prizesWon.push(selectedPrize);
 	  }
@@ -268,6 +272,10 @@ server.post("/api/draw", async (req, res) => {
   const updatedTokens = userTokens - totalTokensNeeded;
   await axios.patch(`${API_BASE_URL}/api/users/${userId}`, {
 	e_coin: updatedTokens,
+  },{
+	headers: {
+	  'api-key': API_KEY,
+	}
   });
 
 
