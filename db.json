@@ -408,6 +408,28 @@
       "description": "刺繡絨毛束口袋描述",
       "image": "https://example.com/gotcha_goods/6.png"
     }
-  ] 
-
+  ],
+  "wishing_fountain": [
+    {
+      "id": 1,
+      "userId": 1,
+      "regionId": 1,
+      "exhibition_name": "藝術展覽",
+      "description": ""
+    },
+    {
+      "id": 2,
+      "userId": 4,
+      "regionId": 2,
+      "exhibition_name": "TechArtExhibition",
+      "description": ""
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "regionId": 3,
+      "exhibition_name": "文學展覽",
+      "description": ""
+    }
+  ]
 }

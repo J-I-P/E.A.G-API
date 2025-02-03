@@ -11,6 +11,7 @@ const express = require('express');
 
 const ECOIN_PER_DRAW = 30
 const API_BASE_URL = 'https://e-a-g-api.vercel.app'
+//const API_BASE_URL = 'http://localhost:3000'
 
 
 
@@ -296,6 +297,47 @@ server.post("/api/draw", async (req, res) => {
   });
 	} catch (error) {
 	  res.status(500).json({ message: "抽獎失敗", error: error.message });
+	}
+  });
+
+  server.post("/api/wish", async (req, res) => {
+	const { userId, exhibition_name, description, regionId } = req.body;
+  
+	try {
+
+	  const userResponse = await axios.get(`${API_BASE_URL}/api/users/${userId}`,{
+		headers: {
+		  'api-key': API_KEY,
+		}
+	  });
+	  const user = userResponse.data;
+  
+	  if (!user) {
+		return res.status(404).json({ message: "使用者不存在" });
+	  }
+  
+
+	  const newWish = {
+		userId: user.id,  
+		exhibition_name,
+		description,
+		regionId: regionId 
+	  };
+  
+
+	  const response = await axios.post(`${API_BASE_URL}/api/wishing_fountain`, newWish, {
+		headers: {
+		  'api-key': API_KEY,
+		}
+	  });
+  
+	  res.status(201).json({
+		message: "許願成功！",
+		wishing_fountain: response.data
+	  });
+	} catch (error) {
+	  console.error("錯誤:", error);
+	  res.status(500).json({ message: "許願失敗", error: error.message });
 	}
   });
 
