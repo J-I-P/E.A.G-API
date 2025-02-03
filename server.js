@@ -17,7 +17,7 @@ const API_BASE_URL = 'http://localhost:3000'
 
 const isDevEnv = process.env.NODE_ENV === 'dev';
 
-console.log("isDevEnv:", isDevEnv);
+console.log("process.env.NODE_ENV:", process.env.NODE_ENV);
 
 // const server = jsonServer.create()
 const server = express();
