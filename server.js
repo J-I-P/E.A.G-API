@@ -10,7 +10,7 @@ const paginate = require('./middlewares/paginate.js');
 const express = require('express');
 
 const ECOIN_PER_DRAW = 30
-const API_BASE_URL = 'http://localhost:3000'
+const API_BASE_URL = 'e-a-g-api.vercel.app'
 
 
 
