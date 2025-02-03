@@ -345,6 +345,74 @@ server.post("/api/draw", async (req, res) => {
 	}
   });
 
+  server.get("/api/votes", async (req, res) => {
+	try {
+		const response = await axios.get(`${API_BASE_URL}/exhibition_pk?_embed=pk_vote`);
+		const exhibitions = response.data;
+	
+		const exhibitionResults = exhibitions.map(exhibition => ({
+		  id: exhibition.id,
+		  name: exhibition.name,
+		  description: exhibition.description,
+		  regionId: exhibition.regionId,
+		  tags: exhibition.tags,
+		  image: exhibition.image,
+		  voteCount: exhibition.pk_vote.length 
+		}));
+	
+		console.log("展覽與投票數統計：", exhibitionResults);
+
+		res.status(200).json({
+			message: "取得資料成功！",
+			vote_results: exhibitionResults
+		  });
+	  } catch (error) {
+		console.error("獲取展覽資料失敗", error);
+	  }
+  });
+
+  server.post("/api/pk_vote", async (req, res) => {
+	const { userId, exhibition_pkId } = req.body;
+  
+	try {
+	  if (!userId || !exhibition_pkId) {
+		return res.status(400).json({ message: "請提供有效的 userId 和 exhibition_pkId" });
+	  }
+  
+	  const pkExhibitionsResponse = await axios.get(`${API_BASE_URL}/exhibition_pk`);
+	  const pkExhibitions = pkExhibitionsResponse.data.map((ex) => ex.id);
+  
+	  if (!pkExhibitions.includes(exhibition_pkId)) {
+		return res.status(400).json({ message: "此展覽不屬於當前的 PK 投票" });
+	  }
+
+	  const existingVotesResponse = await axios.get(`${API_BASE_URL}/pk_vote?userId=${userId}`);
+	  const existingVotes = existingVotesResponse.data;
+  
+	  const hasVoted = existingVotes.some((vote) => pkExhibitions.includes(vote.exhibition_pkId));
+  
+	  if (hasVoted) {
+		return res.status(400).json({ message: "你已經在這場 PK 投票中投過票，不能再投另一個！" });
+	  }
+  
+
+	  const newVote = { userId, exhibition_pkId };
+	  const response = await axios.post(`${API_BASE_URL}/pk_vote`, newVote, {
+		headers: { "api-key": API_KEY },
+	  });
+  
+	  res.status(201).json({
+		message: "投票成功！",
+		vote: response.data
+	  });
+  
+	} catch (error) {
+	  console.error("投票失敗", error);
+	  res.status(500).json({ message: "投票失敗", error: error.message });
+	}
+  });
+  
+
 server.use(jsonServer.rewriter({
 		'/api/*': '/$1',
 		'/blog/:resource/:id/show': '/:resource/:id'

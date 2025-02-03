@@ -431,5 +431,36 @@
       "exhibition_name": "文學展覽",
       "description": ""
     }
+  ],
+  "exhibition_pk": [
+    {
+      "id": 1,
+      "name": "藝術展覽",
+      "description": "藝術展覽描述",
+      "regionId": 1,
+      "tags":["藝術","展覽"],
+      "image": "https://example.com/exhibition_pk/1.png"
+
+    },
+    {
+      "id": 2,
+      "name": "科技展覽",
+      "description": "科技展覽描述",
+      "regionId": 2,
+      "tags":["科技","展覽"],
+      "image": "https://example.com/exhibition_pk/2.png"
+      }
+  ],
+  "pk_vote": [
+    {
+      "id": 1,
+      "userId": 1,
+      "exhibition_pkId": 1
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "exhibition_pkId": 1
+    }
   ]
 }
