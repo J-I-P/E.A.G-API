@@ -3,10 +3,13 @@ const jsonServer = require('json-server')
 // const data = require('./db.json')
 const fs = require('fs')
 const path = require('path')
+const axios = require("axios");
 
 const paginate = require('./middlewares/paginate.js'); 
 
 const express = require('express');
+
+const ECOIN_PER_DRAW = 30
 
 
 const isProductionEnv = process.env.NODE_ENV === 'production';
@@ -62,7 +65,7 @@ server.use((req, res, next) => {
 
 server.post('/api/users/:userId/favorites', (req, res) => {
 	try {
-			const db = router.db; // 獲取 JSON Server 的資料庫
+			const db = router.db; 
 			const userId = parseInt(req.params.userId, 10);
 			const { exhibitionId } = req.body;
 
@@ -131,6 +134,12 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 			);
 	}
 
+	if (req.query.exhibitions_categoriesId) {
+			exhibitions = exhibitions.filter(exhibition =>
+					exhibition.exhibitions_categoriesId === Number(req.query.exhibitions_categoriesId)
+			);
+	}
+
 	if (req.query.organizerId) {
 			exhibitions = exhibitions.filter(exhibition =>
 					exhibition.organizerId === Number(req.query.organizerId)
@@ -146,7 +155,7 @@ server.get('/api/exhibitions', paginate, (req, res) => {
     if (req.query.startDate || req.query.endDate) {
         const startDate = req.query.startDate ? new Date(req.query.startDate) : null;
         const endDate = req.query.endDate ? new Date(req.query.endDate) : null;
-        
+
         exhibitions = exhibitions.filter(exhibition => {
             const exhibitionStartDate = new Date(exhibition.start_date);
             const exhibitionEndDate = new Date(exhibition.end_date);
@@ -197,7 +206,81 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 });
 
 
+server.post("/api/draw", async (req, res) => {
+	const { count, userId } = req.body; 
+	const prizesWon = [];
+  
+	try {
 
+	  if (isNaN(count) || count < 1) {
+		return res.status(400).json({ message: "請提供有效的抽獎次數" });
+	  }
+  
+
+		const userResponse = await axios.get(`http://localhost:3000/users/${userId}`);
+		const user = userResponse.data;
+		if (!user) {
+			return res.status(404).json({ message: "使用者未找到" });
+		}
+  
+		const userTokens = user.e_coin;
+
+
+		const totalTokensNeeded = count * ECOIN_PER_DRAW;
+		if (userTokens < totalTokensNeeded) {
+		  return res.status(400).json({ message: `你的代幣不足，最多只能抽 ${Math.floor(userTokens / ECOIN_PER_DRAW)} 次。` });
+		}
+
+		const drawLimit = Math.min(count, Math.floor(userTokens / ECOIN_PER_DRAW));
+	
+	  console.log("drawLimit:", drawLimit);
+  
+
+	  const response = await axios.get("http://localhost:3000/gotcha_goods");
+	  let prizes = response.data.filter((prize) => prize.stock > 0);
+  
+	  if (prizes.length === 0) {
+		return res.status(400).json({ message: "所有獎品都已經抽完！" });
+	  }
+  
+	  // 抽獎過程
+	  for (let i = 0; i < drawLimit; i++) {
+		// 隨機抽取一個獎品
+		const selectedPrize = prizes[Math.floor(Math.random() * prizes.length)];
+  
+		// 更新庫存
+		await axios.patch(`http://localhost:3000/gotcha_goods/${selectedPrize.id}`, {
+		  stock: selectedPrize.stock - 1,
+		});
+  
+		prizesWon.push(selectedPrize);
+	  }
+
+  const updatedTokens = userTokens - totalTokensNeeded;
+  await axios.patch(`http://localhost:3000/users/${userId}`, {
+	e_coin: updatedTokens,
+  });
+
+
+  const prizeSummary = prizesWon.reduce((summary, prize) => {
+	const prizeName = prize.name;
+	if (summary[prizeName]) {
+	  summary[prizeName] += 1;
+	} else {
+	  summary[prizeName] = 1;
+	}
+	return summary;
+  }, {});
+
+  res.json({
+	message: `抽獎完成！你總共抽中 ${drawLimit} 次`,
+	prizeSummary: prizeSummary, 
+	remainingTokens: updatedTokens, 
+  });
+	} catch (error) {
+	  res.status(500).json({ message: "抽獎失敗", error: error.message });
+	}
+  });
 
 server.use(jsonServer.rewriter({
 		'/api/*': '/$1',

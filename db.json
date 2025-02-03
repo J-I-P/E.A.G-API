@@ -10,7 +10,8 @@
       "address": "",
       "birth": "1990-01-01",
       "image":"",
-      "membershipsId": 4
+      "membershipsId": 4,
+      "e_coin": 200
     },
     {
       "id": 2,
@@ -22,7 +23,8 @@
       "address": "",
       "birth": "1990-01-01",
       "image":"",
-      "membershipsId": 3
+      "membershipsId": 3,
+      "e_coin": 200
     },
     {
       "id": 3,
@@ -34,7 +36,8 @@
       "address": "",
       "birth": "1990-01-01",
       "image":"",
-      "membershipsId": 2
+      "membershipsId": 2,
+      "e_coin": 200
     },
     {
       "id": 4,
@@ -46,7 +49,8 @@
       "address": "",
       "birth": "1990-01-01",
       "image":"",
-      "membershipsId": 1
+      "membershipsId": 1,
+      "e_coin": 200
     }
   ],
   "exhibitions": [
@@ -64,6 +68,7 @@
       "guests": [],
       "views": 130,
       "likes": 0,
+      "exhibitions_categoriesId": 1,
       "featured": true
     },
     {
@@ -80,6 +85,7 @@
       "guests": [],
       "views": 4000,
       "likes": 0,
+      "exhibitions_categoriesId": 5,
       "featured": false
     },
     {
@@ -96,6 +102,7 @@
       "guests": [],
       "views": 23,
       "likes": 0,
+      "exhibitions_categoriesId": 1,
       "featured": false
     },
     {
@@ -112,6 +119,7 @@
       "guests": [],
       "views": 15,
       "likes": 0,
+      "exhibitions_categoriesId": 2,
       "featured": false
     },
     {
@@ -128,6 +136,7 @@
       "guests": [],
       "views": 500,
       "likes": 0,
+      "exhibitions_categoriesId": 4,
       "featured": false
     },
     {
@@ -144,6 +153,7 @@
       "guests": [],
       "views": 90,
       "likes": 0,
+      "exhibitions_categoriesId": 6,
       "featured": false
     },
     {
@@ -159,6 +169,7 @@
       "guests": [],
       "views": 10000,
       "likes": 0,
+      "exhibitions_categoriesId": 6,
       "featured": true
     },
     {
@@ -174,6 +185,7 @@
       "guests": [],
       "views": 2,
       "likes": 0,
+      "exhibitions_categoriesId": 2,
       "featured": true
     },
     {
@@ -189,6 +201,7 @@
       "guests": [],
       "views": 90,
       "likes": 0,
+      "exhibitions_categoriesId": 5,
       "featured": false
     },
     {
@@ -204,6 +217,7 @@
       "guests": [],
       "views": 30,
       "likes": 0,
+      "exhibitions_categoriesId": 5,
       "featured": true
     }
   ],
@@ -319,7 +333,7 @@
       "name" : "連江縣"
     }
   ],
-  "exhibitions_types": [
+  "exhibitions_categories": [
     {
       "id": 1,
       "name": "藝文"
@@ -344,7 +358,56 @@
       "id": 6,
       "name": "其他"
     }
-  ]
-  
+  ],
+  "gotcha_goods": [
+    {
+      "id": 1,
+      "name": "玩偶小吊飾",
+      "stock": 10,
+      
+      "description": "玩偶小吊飾描述",
+      "image": "https://example.com/gotcha_goods/1.png"
+    },
+    {
+      "id": 2,
+      "name": "兩用造型頸枕",
+      "stock": 10,
+      
+      "description": "兩用造型頸枕描述",
+      "image": "https://example.com/gotcha_goods/2.png"
+    },
+    {
+      "id": 3,
+      "name": "繽紛浴巾",
+      "stock": 10,
+      
+      "description": "繽紛浴巾描述",
+      "image": "https://example.com/gotcha_goods/3.png"
+    },
+    {
+      "id": 4,
+      "name": "硅藻土杯墊",
+      "stock": 10,
+      
+      "description": "硅藻土杯墊描述",
+      "image": "https://example.com/gotcha_goods/4.png"
+    },
+    {
+      "id": 5,
+      "name": "桌曆",
+      "stock": 10,
+      
+      "description": "桌曆描述",
+      "image": "https://example.com/gotcha_goods/5.png"
+    },
+    {
+      "id": 6,
+      "name": "刺繡絨毛束口袋",
+      "stock": 10,
+      
+      "description": "刺繡絨毛束口袋描述",
+      "image": "https://example.com/gotcha_goods/6.png"
+    }
+  ] 
 
 }
