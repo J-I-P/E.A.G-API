@@ -10,14 +10,15 @@ const paginate = require('./middlewares/paginate.js');
 const express = require('express');
 
 const ECOIN_PER_DRAW = 30
-// const API_BASE_URL = 'https://e-a-g-api.vercel.app'
-const API_BASE_URL = 'http://localhost:3000'
 
-
-
-const isDevEnv = process.env.NODE_ENV === 'dev';
 
 console.log("process.env.NODE_ENV:", process.env.NODE_ENV);
+if (process.env.NODE_ENV === 'development') {
+	const API_BASE_URL = 'http://localhost:3000'	
+}else {
+	const API_BASE_URL = 'https://e-a-g-api.vercel.app'
+}
+
 
 // const server = jsonServer.create()
 const server = express();
