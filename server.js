@@ -11,12 +11,12 @@ const express = require('express');
 
 const ECOIN_PER_DRAW = 30
 
-
+let API_BASE_URL;
 console.log("process.env.NODE_ENV:", process.env.NODE_ENV);
 if (process.env.NODE_ENV === 'development') {
-	const API_BASE_URL = 'http://localhost:3000'	
+	API_BASE_URL = 'http://localhost:3000'	
 }else {
-	const API_BASE_URL = 'https://e-a-g-api.vercel.app'
+	API_BASE_URL = 'https://e-a-g-api.vercel.app'
 }
 
 
