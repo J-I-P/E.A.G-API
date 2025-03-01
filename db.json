@@ -69,7 +69,8 @@
       "views": 130,
       "likes": 0,
       "exhibitions_categoriesId": 1,
-      "featured": true
+      "featured": true,
+      "intro": "現代藝術展是一場充滿創新與思想碰撞的視覺盛宴，匯集了來自全球的前衛藝術家和創作者,他們以獨特的視角和風格呈現了當代藝術的多樣性和豐富性。本次展覽以\"無限創意\"為主題,探索了當代社會中的多元文化、科技變革、環境保護等議題,並以藝術的形式展現出對這些主題的深刻思考與詮釋。展覽涵蓋了繪畫、雕塑、裝置藝術、數位媒體藝術、影像藝術等多種藝術形式,觀眾將有機會親身體驗從傳統媒介到現代科技的藝術轉變，感受當代藝術家如何打破常規,挑戰傳統美學的界限。每件展品背後都有著創作者的個人故事和藝術理念,觀眾不僅能欣賞到視覺上的震撼,更能通過作品深入瞭解現代藝術的核心精神--勇於創新、追求自由、關注社會。此外，本次展覽特別設置了互動區域，觀眾可以參與到創作過程中，親自體驗現代藝術的創作方式。展覽還將舉辦一系列與藝術家對話的講座、工作坊和現場表演,為觀眾提供更多瞭解和參與現代藝術的機會。無論您是資深藝術愛好者還是初次接觸現代藝術，這次展覽都將是一個難得的機會，讓您在感官與思想的雙重衝擊中，重新思考藝術的定義與價值。歡迎所有熱愛藝術、渴望探索創新思想的朋友們前來參觀,一起走進現代藝術的無限世界,感受當代藝術家的創造力和他們對世界的深刻洞見。讓我們共同見證這場充滿活力與創意的藝術盛典！"
     },
     {
       "id": 2,
@@ -164,6 +165,7 @@
       "end_date": "2025-07-20",
       "address": "台北市內湖區",
       "regionId": 1,
+      "organizerId": 6,
       "tags": ["遊戲", "電競"],
       "url": "https://example.com/gamingshowcase",
       "guests": [],
@@ -180,6 +182,7 @@
       "end_date": "2025-08-10",
       "address": "新竹市東區",
       "regionId": 4,
+      "organizerId": 6,
       "tags": ["文學"],
       "url": "https://example.com/literaryfest",
       "guests": [],
@@ -196,6 +199,7 @@
       "end_date": "2025-09-20",
       "address": "台中市南屯區",
       "regionId": 8,
+      "organizerId": 6,
       "tags": ["時尚"],
       "url": "https://example.com/fashionweek",
       "guests": [],
@@ -212,6 +216,7 @@
       "end_date": "2025-10-15",
       "address": "花蓮縣花蓮市",
       "regionId": 19,
+      "organizerId": 6,
       "tags": ["音樂", "節日"],
       "url": "https://example.com/musicfestival",
       "guests": [],
@@ -224,6 +229,17 @@
   "favorites": [
     { "id": 1, "userId": 1, "exhibitionId": 1 },
     { "id": 2, "userId": 2, "exhibitionId": 1 }
+  ],
+  "organizers": [
+    { "id": 1, "name": "台灣藝術中心" },
+    { "id": 2, "name": "台灣音樂中心" },
+    { "id": 3, "name": "台灣藝術大學" },
+    { "id": 4, "name": "台灣音樂大學" },
+    { "id": 5, "name": "台灣藝術館" },
+    { "id": 6, "name": "台灣音樂館" },
+    { "id": 7, "name": "台灣藝術博物館" },
+    { "id": 8, "name": "台灣音樂博物館" },
+    { "id": 9, "name": "台灣藝術展覽" }
   ],
   "registrations": [
     { "id": 1, "userId": 1, "exhibitionId": 1, "status": "confirmed" }

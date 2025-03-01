@@ -141,6 +141,7 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 			);
 	}
 
+
 	if (req.query.exhibitions_categoriesId) {
 			exhibitions = exhibitions.filter(exhibition =>
 					exhibition.exhibitions_categoriesId === Number(req.query.exhibitions_categoriesId)
