@@ -200,6 +200,48 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 	const { startIndex, endIndex } = req.locals.pagination;
 	const paginatedExhibitions = exhibitions.slice(startIndex, endIndex);
 
+	// if (req.query._expand === 'organizer') {
+	// 	const organizers = db.get('organizers').value();
+	// 	paginatedExhibitions.forEach(exhibition => {
+	// 		exhibition.organizer = organizers.find(org => org.id === exhibition.organizerId) || null;
+	// 	});
+	// }
+
+	// if (req.query._expand === 'region') {
+	// 	const regions = db.get('regions').value();
+	// 	paginatedExhibitions.forEach(exhibition => {
+	// 		exhibition.region = regions.find(org => org.id === exhibition.regionId) || null;
+	// 	});
+	// }
+
+	if (req.query._expand) {
+		console.log("expand");
+		console.log(req.query._expand);
+		const expandFields = req.query._expand.split(',');
+		console.log(expandFields);
+	
+		if (expandFields.includes('organizer')) {
+			const organizers = db.get('organizers').value();
+			paginatedExhibitions.forEach(exhibition => {
+				exhibition.organizer = organizers.find(org => org.id === exhibition.organizerId) || null;
+			});
+		}
+	
+		if (expandFields.includes('region')) {
+			const regions = db.get('regions').value();
+			paginatedExhibitions.forEach(exhibition => {
+				exhibition.region = regions.find(region => region.id === exhibition.regionId) || null;
+			});
+		}
+
+		if (expandFields.includes('exhibitions_categories')) {
+			const exhibitions_categories = db.get('exhibitions_categories').value();
+			paginatedExhibitions.forEach(exhibition => {
+				exhibition.exhibitions_categories = exhibitions_categories.find(exhibitions_categories => exhibitions_categories.id === exhibition.exhibitions_categoriesId) || null;
+			});
+		}
+	}
+
 	const total = exhibitions.length;
 	const totalPages = Math.ceil(total / req.locals.pagination.limit);
 
