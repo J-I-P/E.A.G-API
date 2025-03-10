@@ -69,6 +69,42 @@ server.use((req, res, next) => {
 //   next();
 // });
 
+server.post('/api/login', (req, res) => {
+	const { email, password } = req.body;
+	console.log(email, password);
+	const db = router.db;
+	const user = db.get('users').find({ email, password }).value();
+	if (user) {
+		res.json(user);
+	} else {
+		res.status(401).json({ error: 'Invalid username or password' });
+	}
+});	
+
+server.get('/api/users/:userId/ranking', (req, res) => {
+	const userId = req.params.userId.toString();
+	const db = router.db;
+
+	const ranking = db
+			.get('ranking')
+			.filter(rank => rank.userId.toString() === userId && rank.exhibitionId)
+			.value();
+
+	const exhibitions = db.get('exhibitions').value();
+
+
+	const result = ranking.map(rank => {
+			const exhibition = exhibitions.find(ex => ex.id === rank.exhibitionId);
+			return {
+					...rank,
+					exhibition: exhibition || null 
+			};
+	});
+
+	res.json(result);
+});
+
+
 
 server.post('/api/users/:userId/favorites', (req, res) => {
 	try {
@@ -121,6 +157,27 @@ server.get('/api/users/:userId/favorites', (req, res) => {
 	res.json(result);
 });
 
+server.get('/api/exhibitions/:exhibitionId', (req, res) => {
+	const db = router.db;
+	let exhibitions = db.get('exhibitions').value();
+	if (req.query.userId) {
+        const userId = Number(req.query.userId);
+        const favorites = db.get('favorites').filter(fav => fav.userId === userId).value();
+
+		console.log(favorites);
+
+		console.log(`filter userId: ${req.query.userId} | ${favorites.length}`);
+
+        exhibitions = exhibitions.map(exhibition => ({
+            ...exhibition,
+            isFavorite: favorites.some(fav => Number(fav.exhibitionId) === Number(exhibition.id)),
+        }));
+
+		res.json(exhibitions.find(exhibition => Number(exhibition.id) === Number(req.params.exhibitionId)));
+	} else {
+		res.json(db.get('exhibitions').find({ id: Number(req.params.exhibitionId) }).value());
+    }
+});
 
 server.get('/api/exhibitions', paginate, (req, res) => {
 	const db = router.db;
@@ -134,12 +191,28 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 					exhibition.tags.some(tag => queryTags.includes(tag))
 			);
 	}
+	console.log(`filter tags: ${queryTags} | ${exhibitions.length}`);
+
+	exhibitions.forEach(exhibition => {
+		console.log(exhibition.tags);
+	})
+	console.log("==========")
+
 
 	if (req.query.regionId) {
 			exhibitions = exhibitions.filter(exhibition =>
 					exhibition.regionId === Number(req.query.regionId)
 			);
 	}
+
+	console.log(`filter regionId: ${req.query.regionId} | ${exhibitions.length}`);
+
+	exhibitions.forEach(exhibition => {
+		console.log(exhibition.regionId);
+	})
+	console.log("==========")
+
+
 
 
 	if (req.query.exhibitions_categoriesId) {
@@ -148,17 +221,38 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 			);
 	}
 
+	console.log(`filter exhibitions_categoriesId: ${req.query.exhibitions_categoriesId} | ${exhibitions.length}`);
+	exhibitions.forEach(exhibition => {
+		console.log(exhibition.exhibitions_categoriesId);
+	})
+
+	console.log("==========")
+
 	if (req.query.organizerId) {
 			exhibitions = exhibitions.filter(exhibition =>
 					exhibition.organizerId === Number(req.query.organizerId)
 			);
 	}
 
+	console.log(`filter organizerId: ${req.query.organizerId} | ${exhibitions.length}`);
+	exhibitions.forEach(exhibition => {
+		console.log(exhibition.organizerId);
+	})
+
+	console.log("==========")
+
 	if (req.query.featured) {
 			exhibitions = exhibitions.filter(exhibition =>
 					exhibition.featured === Boolean(req.query.featured)
 			);
 	}
+
+	console.log(`filter featured: ${req.query.featured} | ${exhibitions.length}`);
+	exhibitions.forEach(exhibition => {
+		console.log(exhibition.featured);
+	});
+
+	console.log("==========")
 
     if (req.query.startDate || req.query.endDate) {
         const startDate = req.query.startDate ? new Date(req.query.startDate) : null;
@@ -176,6 +270,15 @@ server.get('/api/exhibitions', paginate, (req, res) => {
         });
     }
 
+	console.log(`filter date: ${req.query.startDate} - ${req.query.endDate} | ${exhibitions.length}`);
+	
+
+	exhibitions.forEach(exhibition => {
+		console.log(exhibition.start_date, exhibition.end_date);
+	});
+
+	console.log("==========")
+
     if (req.query.search) {
         const searchQuery = req.query.search; 
         console.log(searchQuery); 
@@ -184,6 +287,13 @@ server.get('/api/exhibitions', paginate, (req, res) => {
             exhibition.description.includes(searchQuery) 
         );
     }
+
+	console.log(`filter search: ${req.query.search} | ${exhibitions.length}`);
+	exhibitions.forEach(exhibition => {
+		console.log(exhibition.title, exhibition.description);
+	})
+
+	console.log("==========")
 
 	const sortKey = req.query._sort;
 	const sortOrder = req.query._order === 'desc' ? -1 : 1;
@@ -197,22 +307,22 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 			});
 	}
 
+	if (req.query.userId) {
+        const userId = Number(req.query.userId);
+        const favorites = db.get('favorites').filter(fav => fav.userId === userId).value();
+
+		console.log(favorites);
+
+		console.log(`filter userId: ${req.query.userId} | ${favorites.length}`);
+
+        exhibitions = exhibitions.map(exhibition => ({
+            ...exhibition,
+            isFavorite: favorites.some(fav => Number(fav.exhibitionId) === Number(exhibition.id)),
+        }));
+    }
+
 	const { startIndex, endIndex } = req.locals.pagination;
 	const paginatedExhibitions = exhibitions.slice(startIndex, endIndex);
-
-	// if (req.query._expand === 'organizer') {
-	// 	const organizers = db.get('organizers').value();
-	// 	paginatedExhibitions.forEach(exhibition => {
-	// 		exhibition.organizer = organizers.find(org => org.id === exhibition.organizerId) || null;
-	// 	});
-	// }
-
-	// if (req.query._expand === 'region') {
-	// 	const regions = db.get('regions').value();
-	// 	paginatedExhibitions.forEach(exhibition => {
-	// 		exhibition.region = regions.find(org => org.id === exhibition.regionId) || null;
-	// 	});
-	// }
 
 	if (req.query._expand) {
 		console.log("expand");
@@ -241,6 +351,8 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 			});
 		}
 	}
+
+	
 
 	const total = exhibitions.length;
 	const totalPages = Math.ceil(total / req.locals.pagination.limit);
