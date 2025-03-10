@@ -575,24 +575,38 @@
       "description": ""
     }
   ],
-  "exhibition_pk": [
-    {
+ "exhibition_pk": [
+      {
       "id": 1,
-      "name": "藝術展覽",
-      "description": "藝術展覽描述",
+      "title": "沈浸式香氛體驗",
+      "imageSrc": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Wish/wish-lg-3.jpeg",
       "regionId": 1,
-      "tags":["藝術","展覽"],
-      "image": "https://example.com/exhibition_pk/1.png"
-
+      "dateRange": "2025/8/15 - 2025/12/15",
+      "tags": ["香氛", "療癒"],
+      "highlights": "用香氣描繪生活的精緻,將質感化為觸手可及的感動。",
+      "experiences": [
+        "感官漫遊-穿越花香、木質與清新調性的香氣迷宮，發現最適合你的專屬味道。",
+        "調香工坊-親手調製一款獨一無二的香水,記錄你專屬的氣味故事。",
+        "香氛生活提案-探討香氛與空間美學的結合,啟發質感生活靈感。"
+      ],
+      "features": "來自全球的經典香氛品牌,攜手新銳調香師,共同打造氣味的饗宴。"
     },
     {
       "id": 2,
-      "name": "科技展覽",
-      "description": "科技展覽描述",
-      "regionId": 2,
-      "tags":["科技","展覽"],
-      "image": "https://example.com/exhibition_pk/2.png"
-      }
+      "title": "AI光影互動體驗",
+      "imageSrc": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Wish/wish-lg-4.jpeg",
+      "regionId": 8,
+      "dateRange": "2025/09/01 - 2025/11/10",
+      "tags": ["數位", "AI"],
+      "highlights": "光影交錯，穿越數位與現實邊界，探索藝術的無限可能。",
+      "experiences": [
+        "互動光影空間 - 置身光影變幻的場域，與動態藝術互動，感受科技與美學的交融。",
+        "AI 藝術創作 - 體驗 AI 創作的魅力，讓人工智慧根據你的筆觸生成獨一無二的畫作。",
+        "沉浸式音樂劇場 - 音樂與影像同步變化，打造多感官體驗，帶你進入藝術的奇幻世界。"
+      ],
+      "features":
+        "結合 AI、投影技術與聲光效果，重新定義現代數位藝術，創造一場跨界視覺饗宴。"
+    }
   ],
   "pk_vote": [
     {
