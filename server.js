@@ -134,6 +134,27 @@ server.post('/api/users/:userId/favorites', (req, res) => {
 	}
 });
 
+server.delete('/api/users/:userId/favorites', (req, res) => {
+    try {
+        const db = router.db;
+        const userId = parseInt(req.params.userId, 10);
+        const exhibitionId = req.body;
+
+        const existingFavorite = db.get('favorites').find({ userId, exhibitionId }).value();
+
+        if (!existingFavorite) {
+            return res.status(404).json({ error: 'Favorite not found' });
+        }
+
+        db.get('favorites').remove({ userId, exhibitionId }).write();
+
+        res.status(200).json({ message: 'Favorite removed successfully' });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'An error occurred' });
+    }
+});
+
 // server.get('/api/users/:userId/favorites', (req, res) => {
 // 	const userId = req.params.userId.toString();
 // 	const db = router.db;

@@ -366,7 +366,7 @@
     "views": 103,
     "likes": 0,
     "exhibitions_categoriesId": 6,
-    "featured": false,
+    "featured": true,
     "intro": "《魔物獵人 荒野》發售紀念特展，讓你身臨其境體驗狩獵的刺激與樂趣！"
   }
   
@@ -384,7 +384,8 @@
     { "id": 6, "name": "台灣音樂館" },
     { "id": 7, "name": "台灣藝術博物館" },
     { "id": 8, "name": "台灣音樂博物館" },
-    { "id": 9, "name": "台灣藝術展覽" }
+    { "id": 9, "name": "台灣藝術展覽" },
+    { "id": 10, "name": "台灣音樂展覽" }
   ],
   "registrations": [
     { "id": 1, "userId": 1, "exhibitionId": 1, "status": "confirmed" }
