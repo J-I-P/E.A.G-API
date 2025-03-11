@@ -110,7 +110,7 @@ server.post('/api/users/:userId/favorites', (req, res) => {
 	try {
 			const db = router.db; 
 			const userId = parseInt(req.params.userId, 10);
-			const { exhibitionId } = req.body;
+			const { exhibitionId } = parseInt(req.body.exhibitionId, 10);
 
 			if (!exhibitionId) {
 					return res.status(400).json({ error: 'Exhibition ID is required' });
