@@ -580,7 +580,11 @@ server.post("/api/draw", async (req, res) => {
 
   server.get("/api/votes", async (req, res) => {
 	try {
-		const response = await axios.get(`${API_BASE_URL}/exhibition_pk?_embed=pk_vote`);
+		const response = await axios.get(`${API_BASE_URL}/exhibition_pk?_embed=pk_vote`, {
+			headers: {
+			  'api-key': API_KEY
+			}
+		});
 		const exhibitions = response.data;
 	
 		const exhibitionResults = exhibitions.map(exhibition => ({
@@ -612,14 +616,20 @@ server.post("/api/draw", async (req, res) => {
 		return res.status(400).json({ message: "請提供有效的 userId 和 exhibition_pkId" });
 	  }
   
-	  const pkExhibitionsResponse = await axios.get(`${API_BASE_URL}/exhibition_pk`);
+	  const pkExhibitionsResponse = await axios.get(`${API_BASE_URL}/exhibition_pk`, {
+		headers: { "api-key": API_KEY },
+	  });
 	  const pkExhibitions = pkExhibitionsResponse.data.map((ex) => ex.id);
   
 	  if (!pkExhibitions.includes(exhibition_pkId)) {
 		return res.status(400).json({ message: "此展覽不屬於當前的 PK 投票" });
 	  }
 
-	  const existingVotesResponse = await axios.get(`${API_BASE_URL}/pk_vote?userId=${userId}`);
+	  const existingVotesResponse = await axios.get(`${API_BASE_URL}/pk_vote?userId=${userId}`,
+		{
+		  headers: { "api-key": API_KEY },
+		}
+	  );
 	  const existingVotes = existingVotesResponse.data;
   
 	  const hasVoted = existingVotes.some((vote) => pkExhibitions.includes(vote.exhibition_pkId));
