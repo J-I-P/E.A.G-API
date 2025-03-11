@@ -523,54 +523,48 @@
   ],
   "gotcha_goods": [
     {
-      "id": 1,
-      "name": "玩偶小吊飾",
-      "stock": 10,
-      
-      "description": "玩偶小吊飾描述",
-      "image": "https://example.com/gotcha_goods/1.png"
+        "id": 1,
+        "name": "玩偶小吊飾",
+        "stock": 10,
+        "description": "玩偶小吊飾描述",
+        "image": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Goods/goods-1.png"
     },
     {
-      "id": 2,
-      "name": "兩用造型頸枕",
-      "stock": 10,
-      
-      "description": "兩用造型頸枕描述",
-      "image": "https://example.com/gotcha_goods/2.png"
+        "id": 2,
+        "name": "兩用造型頸枕",
+        "stock": 10,
+        "description": "兩用造型頸枕描述",
+        "image": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Goods/goods-2.png"
     },
     {
-      "id": 3,
-      "name": "繽紛浴巾",
-      "stock": 10,
-      
-      "description": "繽紛浴巾描述",
-      "image": "https://example.com/gotcha_goods/3.png"
+        "id": 3,
+        "name": "繽紛浴巾",
+        "stock": 10,
+        "description": "繽紛浴巾描述",
+        "image": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Goods/goods-3.png"
     },
     {
-      "id": 4,
-      "name": "硅藻土杯墊",
-      "stock": 10,
-      
-      "description": "硅藻土杯墊描述",
-      "image": "https://example.com/gotcha_goods/4.png"
+        "id": 4,
+        "name": "硅藻土杯墊",
+        "stock": 10,
+        "description": "硅藻土杯墊描述",
+        "image": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Goods/goods-4.png"
     },
     {
-      "id": 5,
-      "name": "桌曆",
-      "stock": 10,
-      
-      "description": "桌曆描述",
-      "image": "https://example.com/gotcha_goods/5.png"
+        "id": 5,
+        "name": "桌曆",
+        "stock": 10,
+        "description": "桌曆描述",
+        "image": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Goods/goods-5.png"
     },
     {
-      "id": 6,
-      "name": "刺繡絨毛束口袋",
-      "stock": 10,
-      
-      "description": "刺繡絨毛束口袋描述",
-      "image": "https://example.com/gotcha_goods/6.png"
+        "id": 6,
+        "name": "刺繡絨毛束口袋",
+        "stock": 10,
+        "description": "刺繡絨毛束口袋描述",
+        "image": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Goods/goods-6.png"
     }
-  ],
+],
   "wishing_fountain": [
     {
       "id": 1,
