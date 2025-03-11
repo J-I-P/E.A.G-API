@@ -368,8 +368,43 @@
     "exhibitions_categoriesId": 6,
     "featured": true,
     "intro": "《魔物獵人 荒野》發售紀念特展，讓你身臨其境體驗狩獵的刺激與樂趣！"
+  },
+  {
+    "id": 19,
+    "title": "《刺客教條：維京紀元》發售紀念特展——維京之魂，刺客之影",
+    "description": "隨著《刺客教條：維京紀元》的正式發售，我們誠摯邀請所有刺客們參與「維京之魂，刺客之影」特展，一同探索這片充滿神秘與冒險的北歐世界。本次特展將重現遊戲中的維京時代場景，並帶來豐富的遊戲體驗、藝術展覽、維京文化講座及限定周邊販售，讓每位參與者都能身臨其境地感受這場刺客之旅！",
+    "start_date": "2025-03-31",
+    "end_date": "2025-04-30",
+    "address": "南港展覽館",
+    "regionId": 1,
+    "organizerId": 7,
+    "tags": ["遊戲", "動漫"],
+    "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-origin-10-small.png",
+    "guests": [],
+    "views": 103,
+    "likes": 0,
+    "exhibitions_categoriesId": 6,
+    "featured": false,
+    "intro": "《刺客教條：維京紀元》發售紀念特展，讓你身臨其境體驗維京時代的神秘與冒險！"
+  },
+  {
+    "id": 20,
+    "title": "街頭故事 實戰攝影工作坊",
+    "description": "走進基隆，你會被這座城市的獨特魅力所吸引。基隆火車站是攝影工作坊的起點，這裡不僅是交通的樞紐，更是歷史的見證。無數的商旅與漁民在此交匯，留下了深厚的文化底蘊。在街頭攝影工作坊中，我將帶你從海洋廣場到基隆山城，這些地點都充滿了拍攝的潛力。您將學會如何運用不同的器材與鏡頭，選擇合適的拍攝角度，捕捉往來旅客、居民、小販的獨特瞬間。在進行街頭攝影的定義解說後，將帶你進入實際拍攝環節。透過我的隨機示範，你將學會如何觀察光影變化，並在創作中找到靈感。午餐後，我們將有第二段自由創作的時間，讓你的相機成為講述故事的工具。我將指導你如何克服接近陌生人的恐懼，讓你在街頭攝影中更加自信。每位學員的作品都將在定點點評中獲得反饋，幫助提升作品的質量與故事性。基隆的街頭充滿了色彩與故事，讓我們一起揭開基隆的攝影魅力吧！",
+    "start_date": "2025-06-28",
+    "end_date": "2025-06-28",
+    "address": "基隆火車站",
+    "regionId": 3,
+    "organizerId": 7,
+    "tags": ["攝影", "工作坊"],
+    "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-lg-24.png",
+    "guests": [],
+    "views": 103,
+    "likes": 0,
+    "exhibitions_categoriesId": 6,
+    "featured": false,
+    "intro": ""
   }
-  
   ],
   "favorites": [
     { "id": 1, "userId": 1, "exhibitionId": 1 },
