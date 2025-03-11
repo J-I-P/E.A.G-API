@@ -8,6 +8,7 @@ const axios = require("axios");
 const paginate = require('./middlewares/paginate.js'); 
 
 const express = require('express');
+const e = require('express');
 
 const ECOIN_PER_DRAW = 30
 
@@ -247,10 +248,10 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 	}
 	console.log(`filter tags: ${queryTags} | ${exhibitions.length}`);
 
-	exhibitions.forEach(exhibition => {
-		console.log(exhibition.tags);
-	})
-	console.log("==========")
+	// exhibitions.forEach(exhibition => {
+	// 	console.log(exhibition.tags);
+	// })
+	// console.log("==========")
 
 
 	if (req.query.regionId) {
@@ -261,10 +262,10 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 
 	console.log(`filter regionId: ${req.query.regionId} | ${exhibitions.length}`);
 
-	exhibitions.forEach(exhibition => {
-		console.log(exhibition.regionId);
-	})
-	console.log("==========")
+	// exhibitions.forEach(exhibition => {
+	// 	console.log(exhibition.regionId);
+	// })
+	// console.log("==========")
 
 
 
@@ -276,11 +277,11 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 	}
 
 	console.log(`filter exhibitions_categoriesId: ${req.query.exhibitions_categoriesId} | ${exhibitions.length}`);
-	exhibitions.forEach(exhibition => {
-		console.log(exhibition.exhibitions_categoriesId);
-	})
+	// exhibitions.forEach(exhibition => {
+	// 	console.log(exhibition.exhibitions_categoriesId);
+	// })
 
-	console.log("==========")
+	// console.log("==========")
 
 	if (req.query.organizerId) {
 			exhibitions = exhibitions.filter(exhibition =>
@@ -289,11 +290,11 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 	}
 
 	console.log(`filter organizerId: ${req.query.organizerId} | ${exhibitions.length}`);
-	exhibitions.forEach(exhibition => {
-		console.log(exhibition.organizerId);
-	})
+	// exhibitions.forEach(exhibition => {
+	// 	console.log(exhibition.organizerId);
+	// })
 
-	console.log("==========")
+	// console.log("==========")
 
 	if (req.query.featured) {
 			exhibitions = exhibitions.filter(exhibition =>
@@ -302,11 +303,11 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 	}
 
 	console.log(`filter featured: ${req.query.featured} | ${exhibitions.length}`);
-	exhibitions.forEach(exhibition => {
-		console.log(exhibition.featured);
-	});
+	// exhibitions.forEach(exhibition => {
+	// 	console.log(exhibition.featured);
+	// });
 
-	console.log("==========")
+	// console.log("==========")
 
     if (req.query.startDate || req.query.endDate) {
         const startDate = req.query.startDate ? new Date(req.query.startDate) : null;
@@ -327,11 +328,11 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 	console.log(`filter date: ${req.query.startDate} - ${req.query.endDate} | ${exhibitions.length}`);
 	
 
-	exhibitions.forEach(exhibition => {
-		console.log(exhibition.start_date, exhibition.end_date);
-	});
+	// exhibitions.forEach(exhibition => {
+	// 	console.log(exhibition.start_date, exhibition.end_date);
+	// });
 
-	console.log("==========")
+	// console.log("==========")
 
     if (req.query.search) {
         const searchQuery = req.query.search; 
@@ -343,11 +344,11 @@ server.get('/api/exhibitions', paginate, (req, res) => {
     }
 
 	console.log(`filter search: ${req.query.search} | ${exhibitions.length}`);
-	exhibitions.forEach(exhibition => {
-		console.log(exhibition.title, exhibition.description);
-	})
+	// exhibitions.forEach(exhibition => {
+	// 	console.log(exhibition.title, exhibition.description);
+	// })
 
-	console.log("==========")
+	// console.log("==========")
 
 	
 
@@ -365,8 +366,12 @@ server.get('/api/exhibitions', paginate, (req, res) => {
         }));
     }
 
-	const { startIndex, endIndex } = req.locals.pagination;
-	const paginatedExhibitions = exhibitions.slice(startIndex, endIndex);
+	exhibitions.forEach(exhibition => {
+		console.log(exhibition.id, exhibition.id);
+	})
+
+	console.log("==========")
+
 
 	if (req.query._expand) {
 		console.log("expand");
@@ -376,21 +381,21 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 	
 		if (expandFields.includes('organizer')) {
 			const organizers = db.get('organizers').value();
-			paginatedExhibitions.forEach(exhibition => {
+			exhibitions.forEach(exhibition => {
 				exhibition.organizer = organizers.find(org => org.id === exhibition.organizerId) || null;
 			});
 		}
 	
 		if (expandFields.includes('region')) {
 			const regions = db.get('regions').value();
-			paginatedExhibitions.forEach(exhibition => {
+			exhibitions.forEach(exhibition => {
 				exhibition.region = regions.find(region => region.id === exhibition.regionId) || null;
 			});
 		}
 
 		if (expandFields.includes('exhibitions_categories')) {
 			const exhibitions_categories = db.get('exhibitions_categories').value();
-			paginatedExhibitions.forEach(exhibition => {
+			exhibitions.forEach(exhibition => {
 				exhibition.exhibitions_categories = exhibitions_categories.find(exhibitions_categories => exhibitions_categories.id === exhibition.exhibitions_categoriesId) || null;
 			});
 		}
@@ -399,7 +404,7 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 	const sortKey = req.query._sort;
 	const sortOrder = req.query._order === 'desc' ? -1 : 1;
 	if (sortKey) {
-			exhibitions = exhibitions.sort((a, b) => {
+		exhibitions = exhibitions.sort((a, b) => {
 				let valueA = a[sortKey];
 				let valueB = b[sortKey];
 		
@@ -416,6 +421,15 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 				return 0;
 			});
 	}
+
+	const { startIndex, endIndex } = req.locals.pagination;
+	const paginatedExhibitions = exhibitions.slice(startIndex, endIndex);
+
+	paginatedExhibitions.forEach(exhibition => {
+		console.log(exhibition.id, exhibition.views, exhibition.start_date, exhibition.end_date);
+	})
+
+	console.log("==========")
 	
 
 	const total = exhibitions.length;
