@@ -160,28 +160,7 @@ server.delete('/api/users/:userId/favorites', (req, res) => {
     }
 });
 
-// server.get('/api/users/:userId/favorites', (req, res) => {
-// 	const userId = req.params.userId.toString();
-// 	const db = router.db;
 
-// 	const favorites = db
-// 			.get('favorites')
-// 			.filter(fav => fav.userId.toString() === userId && fav.exhibitionId)
-// 			.value();
-
-// 	const exhibitions = db.get('exhibitions').value();
-
-
-// 	const result = favorites.map(fav => {
-// 			const exhibition = exhibitions.find(ex => ex.id === fav.exhibitionId);
-// 			return {
-// 					...fav,
-// 					exhibition: exhibition || null 
-// 			};
-// 	});
-
-// 	res.json(result);
-// });
 
 server.get('/api/exhibitions/:exhibitionId', (req, res) => {
 	const db = router.db;
@@ -370,17 +349,7 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 
 	console.log("==========")
 
-	const sortKey = req.query._sort;
-	const sortOrder = req.query._order === 'desc' ? -1 : 1;
-	if (sortKey) {
-			exhibitions = exhibitions.sort((a, b) => {
-					const valueA = a[sortKey];
-					const valueB = b[sortKey];
-					if (valueA < valueB) return -1 * sortOrder;
-					if (valueA > valueB) return 1 * sortOrder;
-					return 0;
-			});
-	}
+	
 
 	if (req.query.userId) {
         const userId = Number(req.query.userId);
@@ -427,6 +396,17 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 		}
 	}
 
+	const sortKey = req.query._sort;
+	const sortOrder = req.query._order === 'desc' ? -1 : 1;
+	if (sortKey) {
+			exhibitions = exhibitions.sort((a, b) => {
+					const valueA = a[sortKey];
+					const valueB = b[sortKey];
+					if (valueA < valueB) return -1 * sortOrder;
+					if (valueA > valueB) return 1 * sortOrder;
+					return 0;
+			});
+	}
 	
 
 	const total = exhibitions.length;
