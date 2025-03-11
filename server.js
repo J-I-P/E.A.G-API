@@ -151,7 +151,7 @@ server.delete('/api/users/:userId/favorites', (req, res) => {
             return res.status(404).json({ error: 'Favorite not found' });
         }
 
-        db.get('favorites').remove({ userId, exhibitionId }).write();
+        db.get('favorites').remove({ userId, exhibitionId: Number(exhibitionId) }).write();
 
         res.status(200).json({ message: 'Favorite removed successfully' });
     } catch (error) {
