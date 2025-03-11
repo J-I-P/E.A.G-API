@@ -134,28 +134,28 @@ server.post('/api/users/:userId/favorites', (req, res) => {
 	}
 });
 
-server.get('/api/users/:userId/favorites', (req, res) => {
-	const userId = req.params.userId.toString();
-	const db = router.db;
+// server.get('/api/users/:userId/favorites', (req, res) => {
+// 	const userId = req.params.userId.toString();
+// 	const db = router.db;
 
-	const favorites = db
-			.get('favorites')
-			.filter(fav => fav.userId.toString() === userId && fav.exhibitionId)
-			.value();
+// 	const favorites = db
+// 			.get('favorites')
+// 			.filter(fav => fav.userId.toString() === userId && fav.exhibitionId)
+// 			.value();
 
-	const exhibitions = db.get('exhibitions').value();
+// 	const exhibitions = db.get('exhibitions').value();
 
 
-	const result = favorites.map(fav => {
-			const exhibition = exhibitions.find(ex => ex.id === fav.exhibitionId);
-			return {
-					...fav,
-					exhibition: exhibition || null 
-			};
-	});
+// 	const result = favorites.map(fav => {
+// 			const exhibition = exhibitions.find(ex => ex.id === fav.exhibitionId);
+// 			return {
+// 					...fav,
+// 					exhibition: exhibition || null 
+// 			};
+// 	});
 
-	res.json(result);
-});
+// 	res.json(result);
+// });
 
 server.get('/api/exhibitions/:exhibitionId', (req, res) => {
 	const db = router.db;
@@ -173,11 +173,60 @@ server.get('/api/exhibitions/:exhibitionId', (req, res) => {
             isFavorite: favorites.some(fav => Number(fav.exhibitionId) === Number(exhibition.id)),
         }));
 
+		if (req.query._expand) {
+			console.log("expand");
+			console.log(req.query._expand);
+			const expandFields = req.query._expand.split(',');
+			console.log(expandFields);
+			console.log("expandFields.includes('organizers')", expandFields.includes('organizers'));
+		
+			if (expandFields.includes('organizers')) {
+				const organizers = db.get('organizers').value();
+				exhibitions.forEach(exhibition => {
+					exhibition.organizer = organizers.find(org => org.id === exhibition.organizerId) || null;
+				});
+			}
+		}
+
 		res.json(exhibitions.find(exhibition => Number(exhibition.id) === Number(req.params.exhibitionId)));
 	} else {
 		res.json(db.get('exhibitions').find({ id: Number(req.params.exhibitionId) }).value());
     }
 });
+
+// server.get('/api/exhibitions/:exhibitionId', (req, res) => {
+//     const db = router.db;
+//     let exhibitions = db.get('exhibitions').value();
+//     if (req.query.userId) {
+//         const userId = Number(req.query.userId);
+//         const favorites = db.get('favorites').filter(fav => fav.userId === userId).value();
+
+//         console.log(favorites);
+
+//         console.log(`filter userId: ${req.query.userId} | ${favorites.length}`);
+
+//         exhibitions = exhibitions.map(exhibition => ({
+//             ...exhibition,
+//             isFavorite: favorites.some(fav => Number(fav.exhibitionId) === Number(exhibition.id)),
+//         }));
+//     }
+
+//     let exhibition = exhibitions.find(exhibition => Number(exhibition.id) === Number(req.params.exhibitionId));
+
+//     if (req.query._expand === 'organizer' && exhibition) {
+//         const organizer = db.get('organizers').find({ id: exhibition.organizerId }).value();
+//         exhibition = {
+//             ...exhibition,
+//             organizer: organizer || null
+//         };
+//     }
+
+//     if (exhibition) {
+//         res.json(exhibition);
+//     } else {
+//         res.status(404).json({ error: 'Exhibition not found' });
+//     }
+// });
 
 server.get('/api/exhibitions', paginate, (req, res) => {
 	const db = router.db;
