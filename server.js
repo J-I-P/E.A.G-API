@@ -110,7 +110,7 @@ server.post('/api/users/:userId/favorites', (req, res) => {
 	try {
 			const db = router.db; 
 			const userId = parseInt(req.params.userId, 10);
-			const { exhibitionId } = parseInt(req.body.exhibitionId, 10);
+			const { exhibitionId } = req.body;
 
 			if (!exhibitionId) {
 					return res.status(400).json({ error: 'Exhibition ID is required' });
@@ -123,7 +123,7 @@ server.post('/api/users/:userId/favorites', (req, res) => {
 		if (existingFavorite) {
 			newFavorite = existingFavorite;
 		} else {
-			const favorite = { userId, exhibitionId };
+			const favorite = { userId, exhibitionId: Number(exhibitionId) };
 			newFavorite = db.get('favorites').insert(favorite).write();
 		}
 
