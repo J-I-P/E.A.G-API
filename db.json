@@ -350,6 +350,24 @@
     "exhibitions_categoriesId": 6,
     "featured": false,
     "intro": "你對哪個童玩最近像深刻呢？"
+  },
+  {
+    "id": 18,
+    "title": "《魔物獵人 荒野》發售紀念特展——狩獵之境，荒野來襲！",
+    "description": "準備好迎接史詩級狩獵挑戰了嗎？隨著《魔物獵人 荒野》的正式發售，我們誠摯邀請所有獵人們參與「狩獵之境，荒野來襲！」特展，一同探索這片充滿未知與驚奇的世界。本次特展將重現遊戲中的壯闊荒野場景，並帶來豐富的遊戲體驗、藝術展覽、魔物生態講解及限定周邊販售，讓每位參與者都能身臨其境地感受這場狩獵盛宴！",
+    "start_date": "2025-02-28",
+    "end_date": "2025-03-31",
+    "address": "台北市中正區",
+    "regionId": 1,
+    "organizerId": 7,
+    "tags": ["遊戲", "動漫"],
+    "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-origin-9-small.png",
+    "guests": [],
+    "views": 103,
+    "likes": 0,
+    "exhibitions_categoriesId": 6,
+    "featured": false,
+    "intro": "《魔物獵人 荒野》發售紀念特展，讓你身臨其境體驗狩獵的刺激與樂趣！"
   }
   
   ],
