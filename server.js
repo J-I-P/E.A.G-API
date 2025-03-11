@@ -400,11 +400,20 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 	const sortOrder = req.query._order === 'desc' ? -1 : 1;
 	if (sortKey) {
 			exhibitions = exhibitions.sort((a, b) => {
-					const valueA = a[sortKey];
-					const valueB = b[sortKey];
-					if (valueA < valueB) return -1 * sortOrder;
-					if (valueA > valueB) return 1 * sortOrder;
-					return 0;
+				let valueA = a[sortKey];
+				let valueB = b[sortKey];
+		
+				if (sortKey === 'start_date' || sortKey === 'end_date') {
+					valueA = new Date(valueA);
+					valueB = new Date(valueB);
+				} else if (sortKey === 'views') {
+					valueA = Number(valueA);
+					valueB = Number(valueB);
+				}
+		
+				if (valueA < valueB) return -1 * sortOrder;
+				if (valueA > valueB) return 1 * sortOrder;
+				return 0;
 			});
 	}
 	
