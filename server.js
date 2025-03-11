@@ -140,7 +140,11 @@ server.delete('/api/users/:userId/favorites', (req, res) => {
         const userId = parseInt(req.params.userId, 10);
         const { exhibitionId } = req.body;
 
+		console.log(userId, exhibitionId);
+
         const existingFavorite = db.get('favorites').find({ userId, exhibitionId: Number(exhibitionId) }).value();
+
+		console.log(existingFavorite);
 
         if (!existingFavorite) {
 			console.log("Favorite not found");
