@@ -116,7 +116,7 @@ server.post('/api/users/:userId/favorites', (req, res) => {
 					return res.status(400).json({ error: 'Exhibition ID is required' });
 			}
 
-		const existingFavorite = db.get('favorites').find({ userId, exhibitionId }).value();
+		const existingFavorite = db.get('favorites').find({ userId, exhibitionId: Number(exhibitionId) }).value();
 
 		let newFavorite;
 
