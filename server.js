@@ -449,7 +449,8 @@ server.get('/api/exhibitions', paginate, (req, res) => {
 server.post("/api/draw", async (req, res) => {
 	const { count, userId } = req.body; 
 	const prizesWon = [];
-  
+	console.log("count:", count);
+	console.log("userId:", userId, "typeof userId:", typeof(userId));
 	try {
 
 	  if (isNaN(count) || count < 1) {
