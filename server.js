@@ -192,10 +192,38 @@ server.get('/api/exhibitions/:exhibitionId', (req, res) => {
 					exhibition.organizer = organizers.find(org => org.id === exhibition.organizerId) || null;
 				});
 			}
+
+			if (expandFields.includes('region')) {
+				const regions = db.get('regions').value();
+				exhibitions.forEach(exhibition => {
+					exhibition.region = regions.find(region => region.id === exhibition.regionId) || null;
+				});
+			}
 		}
 
 		res.json(exhibitions.find(exhibition => Number(exhibition.id) === Number(req.params.exhibitionId)));
 	} else {
+		if (req.query._expand) {
+			console.log("expand");
+			console.log(req.query._expand);
+			const expandFields = req.query._expand.split(',');
+			console.log(expandFields);
+			console.log("expandFields.includes('organizers')", expandFields.includes('organizers'));
+		
+			if (expandFields.includes('organizers')) {
+				const organizers = db.get('organizers').value();
+				exhibitions.forEach(exhibition => {
+					exhibition.organizer = organizers.find(org => org.id === exhibition.organizerId) || null;
+				});
+			}
+
+			if (expandFields.includes('region')) {
+				const regions = db.get('regions').value();
+				exhibitions.forEach(exhibition => {
+					exhibition.region = regions.find(region => region.id === exhibition.regionId) || null;
+				});
+			}
+		}
 		res.json(db.get('exhibitions').find({ id: Number(req.params.exhibitionId) }).value());
     }
 });
