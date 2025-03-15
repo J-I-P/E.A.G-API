@@ -3,52 +3,52 @@
     {
       "id": 1,
       "name": "阿鼠",
-      "email": "asu@gmail.com", 
-      "password": "asu_password", 
+      "email": "asu@gmail.com",
+      "password": "asu_password",
       "role": "visitor",
       "phone": "0912-123-456",
       "address": "",
       "birth": "1990/01/01",
-      "image":"",
+      "image": "",
       "membershipsId": 4,
       "e_coin": 200
     },
     {
       "id": 2,
       "name": "Harry",
-      "email": "harry@gmail.com", 
+      "email": "harry@gmail.com",
       "password": "harry_password",
-      "role":"visitor",
+      "role": "visitor",
       "phone": "0912-123-456",
       "address": "",
       "birth": "1990/01/01",
-      "image":"",
+      "image": "",
       "membershipsId": 3,
       "e_coin": 200
     },
     {
       "id": 3,
       "name": "1457",
-      "email": "1457@gmail.com", 
+      "email": "1457@gmail.com",
       "password": "1457_password",
-      "role":"visitor",
+      "role": "visitor",
       "phone": "0912-123-456",
       "address": "",
       "birth": "1990/01/01",
-      "image":"",
+      "image": "",
       "membershipsId": 2,
       "e_coin": 200
     },
     {
       "id": 4,
       "name": "Nicole",
-      "email": "nicole@gmail.com", 
+      "email": "nicole@gmail.com",
       "password": "nicole_password",
-      "role":"visitor",
+      "role": "visitor",
       "phone": "0912-123-456",
       "address": "",
       "birth": "1990/01/01",
-      "image":"",
+      "image": "",
       "membershipsId": 1,
       "e_coin": 200
     }
@@ -63,7 +63,10 @@
       "address": "台北市信義區",
       "regionId": 1,
       "organizerId": 1,
-      "tags": ["藝術", "國際"],
+      "tags": [
+        "藝術",
+        "國際"
+      ],
       "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-origin-6-small.png",
       "guests": [],
       "views": 130,
@@ -81,7 +84,10 @@
       "address": "新北市板橋區",
       "regionId": 2,
       "organizerId": 2,
-      "tags": ["科技", "創新"],
+      "tags": [
+        "科技",
+        "創新"
+      ],
       "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-lg-18.jpg",
       "guests": [],
       "views": 4000,
@@ -98,7 +104,10 @@
       "address": "高雄市鹽埕區",
       "regionId": 3,
       "organizerId": 3,
-      "tags": ["美食", "藝術"],
+      "tags": [
+        "美食",
+        "藝術"
+      ],
       "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-lg-25.jpg",
       "guests": [],
       "views": 23,
@@ -115,7 +124,9 @@
       "address": "台中市西屯區",
       "regionId": 4,
       "organizerId": 4,
-      "tags": ["歷史"],
+      "tags": [
+        "歷史"
+      ],
       "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-origin-7-small.png",
       "guests": [],
       "views": 15,
@@ -132,7 +143,9 @@
       "address": "台南市中西區",
       "regionId": 5,
       "organizerId": 5,
-      "tags": ["攝影"],
+      "tags": [
+        "攝影"
+      ],
       "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-lg-24.jpg",
       "guests": [],
       "views": 500,
@@ -149,7 +162,10 @@
       "address": "桃園市中壢區",
       "regionId": 6,
       "organizerId": 6,
-      "tags": ["設計", "會議"],
+      "tags": [
+        "設計",
+        "會議"
+      ],
       "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-lg-15.jpg",
       "guests": [],
       "views": 90,
@@ -166,7 +182,10 @@
       "address": "台北市內湖區",
       "regionId": 1,
       "organizerId": 6,
-      "tags": ["遊戲", "電競"],
+      "tags": [
+        "遊戲",
+        "電競"
+      ],
       "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-origin-12-small.png",
       "guests": [],
       "views": 10000,
@@ -183,7 +202,9 @@
       "address": "新竹市東區",
       "regionId": 4,
       "organizerId": 6,
-      "tags": ["文學"],
+      "tags": [
+        "文學"
+      ],
       "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-lg-14.jpg",
       "guests": [],
       "views": 2,
@@ -200,7 +221,9 @@
       "address": "台中市南屯區",
       "regionId": 8,
       "organizerId": 6,
-      "tags": ["時尚"],
+      "tags": [
+        "時尚"
+      ],
       "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-lg-23.jpg",
       "guests": [],
       "views": 90,
@@ -217,7 +240,10 @@
       "address": "花蓮縣花蓮市",
       "regionId": 19,
       "organizerId": 6,
-      "tags": ["音樂", "節日"],
+      "tags": [
+        "音樂",
+        "節日"
+      ],
       "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-lg-18.jpg",
       "guests": [],
       "views": 30,
@@ -226,308 +252,412 @@
       "featured": true
     },
     {
-    "id": 11,
-    "title": "世界美食文化展",
-    "description": "世界美食文化展是一場結合藝術與味蕾享受的國際盛會，來自世界各地的頂級廚師與美食藝術家齊聚一堂，透過精緻的擺盤與創新的料理手法，展現不同文化的獨特風味。展覽現場將設有多個美食區域，涵蓋亞洲、歐洲、美洲與地中海料理，並搭配藝術裝置，讓參觀者在視覺與味覺上獲得雙重享受。此外，展覽還規劃了現場廚藝示範與美食工作坊，讓參觀者能親自體驗料理藝術的魅力。",
-    "start_date": "2025/01/15",
-    "end_date": "2025/09/20",
-    "address": "台北市大安區",
-    "regionId": 1,
-    "organizerId": 2,
-    "tags": ["美食", "國際"],
-    "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-lg-26.jpg",
-    "guests": [],
-    "views": 85,
-    "likes": 0,
-    "exhibitions_categoriesId": 6,
-    "featured": false,
-    "intro": "這場世界美食文化展不僅帶來來自全球的美食佳餚，還邀請了多位米其林主廚與料理藝術家，為大家帶來關於食材、烹飪技法與飲食文化的精彩分享。參觀者可以親自參與品酒會、甜點製作課程，或是欣賞頂級廚藝表演，體驗飲食與藝術的完美融合。"
-  },
-  {
-    "id": 12,
-    "title": "科技創新展",
-    "description": "科技創新展是一場聚焦於未來技術與創新應用的展覽，涵蓋人工智慧、智慧城市、區塊鏈、元宇宙等前沿技術。展覽邀請了來自國內外的知名企業與技術專家，展示最新的科技突破與應用案例。參觀者可透過互動裝置親身體驗最新的數位科技，並參與一系列專題講座與創新工作坊，了解未來科技如何改變我們的生活。",
-    "start_date": "2025/01/15",
-    "end_date": "2025/08/15",
-    "address": "台北市大同區",
-    "regionId": 1,
-    "organizerId": 3,
-    "tags": ["創新", "資訊"],
-    "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-lg-20.jpg",
-    "guests": [],
-    "views": 210,
-    "likes": 0,
-    "exhibitions_categoriesId": 5,
-    "featured": true,
-    "intro": "科技創新展將帶來最前沿的技術發展，從AI驅動的智慧應用到區塊鏈技術的實際落地，這場展覽將為所有對科技感興趣的參觀者提供寶貴的見解與體驗機會。"
-  },
-  {
-    "id": 13,
-    "title": "漫畫文化祭",
-    "description": "漫畫文化祭是一場專為漫畫迷打造的盛會，集合了來自世界各地的漫畫創作者、出版社與動畫工作室，展示最新的漫畫作品、原畫與周邊商品。參觀者不僅可以搶先看到新作發表，還能與心儀的漫畫家近距離交流、參加簽名會與繪畫工作坊。展覽更設有角色扮演區，讓COSER們能夠展現自己精心製作的角色服裝。",
-    "start_date": "2025/01/15",
-    "end_date": "2025/07/07",
-    "address": "台北市中山區",
-    "regionId": 1,
-    "organizerId": 3,
-    "tags": ["藝術", "漫畫"],
-    "url": "https://github.com/ExpoAnyGate/E.A.G-primary/blob/main/public/Demo/demo-lg-17.jpg?raw=true",
-    "guests": [],
-    "views": 320,
-    "likes": 0,
-    "exhibitions_categoriesId": 3,
-    "featured": true,
-    "intro": "漫畫文化祭帶來全球最新的漫畫作品與創作趨勢，邀請漫畫家現場簽名與分享創作心得，還有豐富的周邊商品與角色扮演活動，讓漫畫迷盡情享受二次元的世界。"
-  },
-  {
-    "id": 14,
-    "title": "互動新媒體藝術展",
-    "description": "本展覽探索數位科技與藝術的交融，涵蓋虛擬實境（VR）、擴增實境（AR）與人工智慧生成藝術（AI Art）。參觀者可以透過互動裝置體驗藝術與科技融合的魅力，參與沉浸式展演，感受數位媒體帶來的全新感官衝擊。展覽將邀請數位藝術家與工程師進行現場創作，並舉辦一系列工作坊，帶領參觀者親手創作屬於自己的數位藝術作品。",
-    "start_date": "2025/01/15",
-    "end_date": "2025/06/25",
-    "address": "台北市松山區",
-    "regionId": 1,
-    "organizerId": 5,
-    "tags": ["藝術", "創新"],
-    "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-lg-19.jpg",
-    "guests": [],
-    "views": 180,
-    "likes": 0,
-    "exhibitions_categoriesId": 4,
-    "featured": false,
-    "intro": "本展覽帶來最前沿的互動藝術體驗，無論是VR沉浸式藝術空間，還是AI生成的視覺藝術，都將顛覆您對傳統藝術的認知。"
-  },
-  {
-    "id": 15,
-    "title": "科學探索展",
-    "description": "科學探索展是一場適合各年齡層的科普盛會，展覽內容涵蓋宇宙探索、環境科學、生物技術與機器人學等多元領域。參觀者可透過互動裝置親身體驗各種科學現象，並觀賞最新的科技發展成果。展覽還設有實驗工作坊與科學秀，讓大家在輕鬆的氛圍中學習科學知識。",
-    "start_date": "2025/01/15",
-    "end_date": "2025/05/15",
-    "address": "台北市信義區",
-    "regionId": 1,
-    "organizerId": 6,
-    "tags": ["科學", "資訊"],
-    "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-origin-2-small.png",
-    "guests": [],
-    "views": 250,
-    "likes": 0,
-    "exhibitions_categoriesId": 4,
-    "featured": true,
-    "intro": "科學探索展將帶來最有趣的科學體驗，從天文望遠鏡到仿生機器人，每一個展區都將帶領觀眾深入了解科學的奧妙。"
-  },
-  {
-    "id": 16,
-    "title": "歷史文化特展",
-    "description": "這場特展將帶領參觀者走入歷史的長河，探索古文明的智慧與遺產。展覽將展示各時代的文物、手稿與多媒體互動內容，讓觀眾深入了解人類文明的發展軌跡。此外，展覽還將舉辦歷史學者講座與文化體驗活動，讓參觀者能夠更深入地了解歷史的價值與意義。",
-    "start_date": "2025/01/15",
-    "end_date": "2025/04/10",
-    "address": "台北市文山區",
-    "regionId": 1,
-    "organizerId": 7,
-    "tags": ["歷史", "文化"],
-    "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-origin-5-small.png",
-    "guests": [],
-    "views": 120,
-    "likes": 0,
-    "exhibitions_categoriesId": 2,
-    "featured": false,
-    "intro": "透過珍貴文物與多媒體展示，這場歷史文化特展將帶您穿越時空，重溫人類文明的璀璨時刻。"
-  },
+      "id": 11,
+      "title": "世界美食文化展",
+      "description": "世界美食文化展是一場結合藝術與味蕾享受的國際盛會，來自世界各地的頂級廚師與美食藝術家齊聚一堂，透過精緻的擺盤與創新的料理手法，展現不同文化的獨特風味。展覽現場將設有多個美食區域，涵蓋亞洲、歐洲、美洲與地中海料理，並搭配藝術裝置，讓參觀者在視覺與味覺上獲得雙重享受。此外，展覽還規劃了現場廚藝示範與美食工作坊，讓參觀者能親自體驗料理藝術的魅力。",
+      "start_date": "2025/01/15",
+      "end_date": "2025/09/20",
+      "address": "台北市大安區",
+      "regionId": 1,
+      "organizerId": 2,
+      "tags": [
+        "美食",
+        "國際"
+      ],
+      "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-lg-26.jpg",
+      "guests": [],
+      "views": 85,
+      "likes": 0,
+      "exhibitions_categoriesId": 6,
+      "featured": false,
+      "intro": "這場世界美食文化展不僅帶來來自全球的美食佳餚，還邀請了多位米其林主廚與料理藝術家，為大家帶來關於食材、烹飪技法與飲食文化的精彩分享。參觀者可以親自參與品酒會、甜點製作課程，或是欣賞頂級廚藝表演，體驗飲食與藝術的完美融合。"
+    },
     {
-    "id": 17,
-    "title": "你我的童年",
-    "description": "這場特展將展出我們從小玩到大的童玩，就像坐時光機帶我們回到那個最簡單純粹的年代。",
-    "start_date": "2025-01-16",
-    "end_date": "2025-06-20",
-    "address": "台北市文山區",
-    "regionId": 8,
-    "organizerId": 7,
-    "tags": ["回憶", "玩具"],
-    "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-origin-8-small.png",
-    "guests": [],
-    "views": 103,
-    "likes": 0,
-    "exhibitions_categoriesId": 6,
-    "featured": false,
-    "intro": "你對哪個童玩最近像深刻呢？"
-  },
-  {
-    "id": 18,
-    "title": "《魔物獵人 荒野》發售紀念特展——狩獵之境，荒野來襲！",
-    "description": "準備好迎接史詩級狩獵挑戰了嗎？隨著《魔物獵人 荒野》的正式發售，我們誠摯邀請所有獵人們參與「狩獵之境，荒野來襲！」特展，一同探索這片充滿未知與驚奇的世界。本次特展將重現遊戲中的壯闊荒野場景，並帶來豐富的遊戲體驗、藝術展覽、魔物生態講解及限定周邊販售，讓每位參與者都能身臨其境地感受這場狩獵盛宴！",
-    "start_date": "2025-02-28",
-    "end_date": "2025-03-31",
-    "address": "南港展覽館",
-    "regionId": 1,
-    "organizerId": 7,
-    "tags": ["遊戲", "動漫"],
-    "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/monster.jpeg",
-    "guests": [],
-    "views": 103,
-    "likes": 0,
-    "exhibitions_categoriesId": 6,
-    "featured": true,
-    "intro": "《魔物獵人 荒野》發售紀念特展，讓你身臨其境體驗狩獵的刺激與樂趣！"
-  },
-  {
-    "id": 19,
-    "title": "《刺客教條：維京紀元》發售紀念特展——維京之魂，刺客之影",
-    "description": "隨著《刺客教條：維京紀元》的正式發售，我們誠摯邀請所有刺客們參與「維京之魂，刺客之影」特展，一同探索這片充滿神秘與冒險的北歐世界。本次特展將重現遊戲中的維京時代場景，並帶來豐富的遊戲體驗、藝術展覽、維京文化講座及限定周邊販售，讓每位參與者都能身臨其境地感受這場刺客之旅！",
-    "start_date": "2025-03-31",
-    "end_date": "2025-04-30",
-    "address": "南港展覽館",
-    "regionId": 1,
-    "organizerId": 7,
-    "tags": ["遊戲", "動漫"],
-    "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-origin-10-small.png",
-    "guests": [],
-    "views": 103,
-    "likes": 0,
-    "exhibitions_categoriesId": 6,
-    "featured": false,
-    "intro": "《刺客教條：維京紀元》發售紀念特展，讓你身臨其境體驗維京時代的神秘與冒險！"
-  },
-  {
-    "id": 20,
-    "title": "街頭故事 實戰攝影工作坊",
-    "description": "走進基隆，你會被這座城市的獨特魅力所吸引。基隆火車站是攝影工作坊的起點，這裡不僅是交通的樞紐，更是歷史的見證。無數的商旅與漁民在此交匯，留下了深厚的文化底蘊。在街頭攝影工作坊中，我將帶你從海洋廣場到基隆山城，這些地點都充滿了拍攝的潛力。您將學會如何運用不同的器材與鏡頭，選擇合適的拍攝角度，捕捉往來旅客、居民、小販的獨特瞬間。在進行街頭攝影的定義解說後，將帶你進入實際拍攝環節。透過我的隨機示範，你將學會如何觀察光影變化，並在創作中找到靈感。午餐後，我們將有第二段自由創作的時間，讓你的相機成為講述故事的工具。我將指導你如何克服接近陌生人的恐懼，讓你在街頭攝影中更加自信。每位學員的作品都將在定點點評中獲得反饋，幫助提升作品的質量與故事性。基隆的街頭充滿了色彩與故事，讓我們一起揭開基隆的攝影魅力吧！",
-    "start_date": "2025-06-28",
-    "end_date": "2025-06-28",
-    "address": "基隆火車站",
-    "regionId": 3,
-    "organizerId": 7,
-    "tags": ["攝影", "工作坊"],
-    "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-lg-24.png",
-    "guests": [],
-    "views": 103,
-    "likes": 0,
-    "exhibitions_categoriesId": 6,
-    "featured": false,
-    "intro": ""
-  }
+      "id": 12,
+      "title": "科技創新展",
+      "description": "科技創新展是一場聚焦於未來技術與創新應用的展覽，涵蓋人工智慧、智慧城市、區塊鏈、元宇宙等前沿技術。展覽邀請了來自國內外的知名企業與技術專家，展示最新的科技突破與應用案例。參觀者可透過互動裝置親身體驗最新的數位科技，並參與一系列專題講座與創新工作坊，了解未來科技如何改變我們的生活。",
+      "start_date": "2025/01/15",
+      "end_date": "2025/08/15",
+      "address": "台北市大同區",
+      "regionId": 1,
+      "organizerId": 3,
+      "tags": [
+        "創新",
+        "資訊"
+      ],
+      "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-lg-20.jpg",
+      "guests": [],
+      "views": 210,
+      "likes": 0,
+      "exhibitions_categoriesId": 5,
+      "featured": true,
+      "intro": "科技創新展將帶來最前沿的技術發展，從AI驅動的智慧應用到區塊鏈技術的實際落地，這場展覽將為所有對科技感興趣的參觀者提供寶貴的見解與體驗機會。"
+    },
+    {
+      "id": 13,
+      "title": "漫畫文化祭",
+      "description": "漫畫文化祭是一場專為漫畫迷打造的盛會，集合了來自世界各地的漫畫創作者、出版社與動畫工作室，展示最新的漫畫作品、原畫與周邊商品。參觀者不僅可以搶先看到新作發表，還能與心儀的漫畫家近距離交流、參加簽名會與繪畫工作坊。展覽更設有角色扮演區，讓COSER們能夠展現自己精心製作的角色服裝。",
+      "start_date": "2025/01/15",
+      "end_date": "2025/07/07",
+      "address": "台北市中山區",
+      "regionId": 1,
+      "organizerId": 3,
+      "tags": [
+        "藝術",
+        "漫畫"
+      ],
+      "url": "https://github.com/ExpoAnyGate/E.A.G-primary/blob/main/public/Demo/demo-lg-17.jpg?raw=true",
+      "guests": [],
+      "views": 320,
+      "likes": 0,
+      "exhibitions_categoriesId": 3,
+      "featured": true,
+      "intro": "漫畫文化祭帶來全球最新的漫畫作品與創作趨勢，邀請漫畫家現場簽名與分享創作心得，還有豐富的周邊商品與角色扮演活動，讓漫畫迷盡情享受二次元的世界。"
+    },
+    {
+      "id": 14,
+      "title": "互動新媒體藝術展",
+      "description": "本展覽探索數位科技與藝術的交融，涵蓋虛擬實境（VR）、擴增實境（AR）與人工智慧生成藝術（AI Art）。參觀者可以透過互動裝置體驗藝術與科技融合的魅力，參與沉浸式展演，感受數位媒體帶來的全新感官衝擊。展覽將邀請數位藝術家與工程師進行現場創作，並舉辦一系列工作坊，帶領參觀者親手創作屬於自己的數位藝術作品。",
+      "start_date": "2025/01/15",
+      "end_date": "2025/06/25",
+      "address": "台北市松山區",
+      "regionId": 1,
+      "organizerId": 5,
+      "tags": [
+        "藝術",
+        "創新"
+      ],
+      "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-lg-19.jpg",
+      "guests": [],
+      "views": 180,
+      "likes": 0,
+      "exhibitions_categoriesId": 4,
+      "featured": false,
+      "intro": "本展覽帶來最前沿的互動藝術體驗，無論是VR沉浸式藝術空間，還是AI生成的視覺藝術，都將顛覆您對傳統藝術的認知。"
+    },
+    {
+      "id": 15,
+      "title": "科學探索展",
+      "description": "科學探索展是一場適合各年齡層的科普盛會，展覽內容涵蓋宇宙探索、環境科學、生物技術與機器人學等多元領域。參觀者可透過互動裝置親身體驗各種科學現象，並觀賞最新的科技發展成果。展覽還設有實驗工作坊與科學秀，讓大家在輕鬆的氛圍中學習科學知識。",
+      "start_date": "2025/01/15",
+      "end_date": "2025/05/15",
+      "address": "台北市信義區",
+      "regionId": 1,
+      "organizerId": 6,
+      "tags": [
+        "科學",
+        "資訊"
+      ],
+      "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-origin-2-small.png",
+      "guests": [],
+      "views": 250,
+      "likes": 0,
+      "exhibitions_categoriesId": 4,
+      "featured": true,
+      "intro": "科學探索展將帶來最有趣的科學體驗，從天文望遠鏡到仿生機器人，每一個展區都將帶領觀眾深入了解科學的奧妙。"
+    },
+    {
+      "id": 16,
+      "title": "歷史文化特展",
+      "description": "這場特展將帶領參觀者走入歷史的長河，探索古文明的智慧與遺產。展覽將展示各時代的文物、手稿與多媒體互動內容，讓觀眾深入了解人類文明的發展軌跡。此外，展覽還將舉辦歷史學者講座與文化體驗活動，讓參觀者能夠更深入地了解歷史的價值與意義。",
+      "start_date": "2025/01/15",
+      "end_date": "2025/04/10",
+      "address": "台北市文山區",
+      "regionId": 1,
+      "organizerId": 7,
+      "tags": [
+        "歷史",
+        "文化"
+      ],
+      "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-origin-5-small.png",
+      "guests": [],
+      "views": 120,
+      "likes": 0,
+      "exhibitions_categoriesId": 2,
+      "featured": false,
+      "intro": "透過珍貴文物與多媒體展示，這場歷史文化特展將帶您穿越時空，重溫人類文明的璀璨時刻。"
+    },
+    {
+      "id": 17,
+      "title": "你我的童年",
+      "description": "這場特展將展出我們從小玩到大的童玩，就像坐時光機帶我們回到那個最簡單純粹的年代。",
+      "start_date": "2025-01-16",
+      "end_date": "2025-06-20",
+      "address": "台北市文山區",
+      "regionId": 8,
+      "organizerId": 7,
+      "tags": [
+        "回憶",
+        "玩具"
+      ],
+      "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-origin-8-small.png",
+      "guests": [],
+      "views": 103,
+      "likes": 0,
+      "exhibitions_categoriesId": 6,
+      "featured": false,
+      "intro": "你對哪個童玩最近像深刻呢？"
+    },
+    {
+      "id": 18,
+      "title": "《魔物獵人 荒野》發售紀念特展——狩獵之境，荒野來襲！",
+      "description": "準備好迎接史詩級狩獵挑戰了嗎？隨著《魔物獵人 荒野》的正式發售，我們誠摯邀請所有獵人們參與「狩獵之境，荒野來襲！」特展，一同探索這片充滿未知與驚奇的世界。本次特展將重現遊戲中的壯闊荒野場景，並帶來豐富的遊戲體驗、藝術展覽、魔物生態講解及限定周邊販售，讓每位參與者都能身臨其境地感受這場狩獵盛宴！",
+      "start_date": "2025-02-28",
+      "end_date": "2025-03-31",
+      "address": "南港展覽館",
+      "regionId": 1,
+      "organizerId": 7,
+      "tags": [
+        "遊戲",
+        "動漫"
+      ],
+      "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/monster.jpeg",
+      "guests": [],
+      "views": 103,
+      "likes": 0,
+      "exhibitions_categoriesId": 6,
+      "featured": true,
+      "intro": "《魔物獵人 荒野》發售紀念特展，讓你身臨其境體驗狩獵的刺激與樂趣！"
+    },
+    {
+      "id": 19,
+      "title": "《刺客教條：維京紀元》發售紀念特展——維京之魂，刺客之影",
+      "description": "隨著《刺客教條：維京紀元》的正式發售，我們誠摯邀請所有刺客們參與「維京之魂，刺客之影」特展，一同探索這片充滿神秘與冒險的北歐世界。本次特展將重現遊戲中的維京時代場景，並帶來豐富的遊戲體驗、藝術展覽、維京文化講座及限定周邊販售，讓每位參與者都能身臨其境地感受這場刺客之旅！",
+      "start_date": "2025-03-31",
+      "end_date": "2025-04-30",
+      "address": "南港展覽館",
+      "regionId": 1,
+      "organizerId": 7,
+      "tags": [
+        "遊戲",
+        "動漫"
+      ],
+      "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-origin-10-small.png",
+      "guests": [],
+      "views": 103,
+      "likes": 0,
+      "exhibitions_categoriesId": 6,
+      "featured": false,
+      "intro": "《刺客教條：維京紀元》發售紀念特展，讓你身臨其境體驗維京時代的神秘與冒險！"
+    },
+    {
+      "id": 20,
+      "title": "街頭故事 實戰攝影工作坊",
+      "description": "走進基隆，你會被這座城市的獨特魅力所吸引。基隆火車站是攝影工作坊的起點，這裡不僅是交通的樞紐，更是歷史的見證。無數的商旅與漁民在此交匯，留下了深厚的文化底蘊。在街頭攝影工作坊中，我將帶你從海洋廣場到基隆山城，這些地點都充滿了拍攝的潛力。您將學會如何運用不同的器材與鏡頭，選擇合適的拍攝角度，捕捉往來旅客、居民、小販的獨特瞬間。在進行街頭攝影的定義解說後，將帶你進入實際拍攝環節。透過我的隨機示範，你將學會如何觀察光影變化，並在創作中找到靈感。午餐後，我們將有第二段自由創作的時間，讓你的相機成為講述故事的工具。我將指導你如何克服接近陌生人的恐懼，讓你在街頭攝影中更加自信。每位學員的作品都將在定點點評中獲得反饋，幫助提升作品的質量與故事性。基隆的街頭充滿了色彩與故事，讓我們一起揭開基隆的攝影魅力吧！",
+      "start_date": "2025-06-28",
+      "end_date": "2025-06-28",
+      "address": "基隆火車站",
+      "regionId": 3,
+      "organizerId": 7,
+      "tags": [
+        "攝影",
+        "工作坊"
+      ],
+      "url": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Demo/demo-lg-24.png",
+      "guests": [],
+      "views": 103,
+      "likes": 0,
+      "exhibitions_categoriesId": 6,
+      "featured": false,
+      "intro": ""
+    }
   ],
   "favorites": [
-    { "id": 1, "userId": 1, "exhibitionId": 1 },
-    { "id": 2, "userId": 2, "exhibitionId": 1 }
+    {
+      "id": 1,
+      "userId": 1,
+      "exhibitionId": 1
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "exhibitionId": 1
+    }
   ],
   "organizers": [
-    { "id": 1, "name": "台灣藝術中心" },
-    { "id": 2, "name": "台灣音樂中心" },
-    { "id": 3, "name": "台灣藝術大學" },
-    { "id": 4, "name": "台灣音樂大學" },
-    { "id": 5, "name": "台灣藝術館" },
-    { "id": 6, "name": "台灣音樂館" },
-    { "id": 7, "name": "台灣藝術博物館" },
-    { "id": 8, "name": "台灣音樂博物館" },
-    { "id": 9, "name": "台灣藝術展覽" },
-    { "id": 10, "name": "台灣音樂展覽" }
+    {
+      "id": 1,
+      "name": "台灣藝術中心"
+    },
+    {
+      "id": 2,
+      "name": "台灣音樂中心"
+    },
+    {
+      "id": 3,
+      "name": "台灣藝術大學"
+    },
+    {
+      "id": 4,
+      "name": "台灣音樂大學"
+    },
+    {
+      "id": 5,
+      "name": "台灣藝術館"
+    },
+    {
+      "id": 6,
+      "name": "台灣音樂館"
+    },
+    {
+      "id": 7,
+      "name": "台灣藝術博物館"
+    },
+    {
+      "id": 8,
+      "name": "台灣音樂博物館"
+    },
+    {
+      "id": 9,
+      "name": "台灣藝術展覽"
+    },
+    {
+      "id": 10,
+      "name": "台灣音樂展覽"
+    }
   ],
   "registrations": [
-    { "id": 1, "userId": 1, "exhibitionId": 1, "status": "confirmed" }
+    {
+      "id": 1,
+      "userId": 1,
+      "exhibitionId": 1,
+      "status": "confirmed"
+    }
   ],
   "roles": [
-    { "id": 1, "role": "admin" },
-    { "id": 2, "role": "participant" },
-    { "id": 3, "role": "organizer" }
+    {
+      "id": 1,
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "role": "participant"
+    },
+    {
+      "id": 3,
+      "role": "organizer"
+    }
   ],
   "memberships": [
-    { "id": 1, "userId": 1, "memberships_levelId": 1, "valid_until": "2025/12/31" },
-    { "id": 2, "userId": 4, "memberships_levelId": 2, "valid_until": "2026/12/31" }
+    {
+      "id": 1,
+      "userId": 1,
+      "memberships_levelId": 1,
+      "valid_until": "2025/12/31"
+    },
+    {
+      "id": 2,
+      "userId": 4,
+      "memberships_levelId": 2,
+      "valid_until": "2026/12/31"
+    }
   ],
   "memberships_level": [
-    { "id": 1, "membership": "basic"},
-    { "id": 2, "membership": "mini"},
-    { "id": 3, "membership": "plus"},
-    { "id": 4, "membership": "pro"}
+    {
+      "id": 1,
+      "membership": "basic"
+    },
+    {
+      "id": 2,
+      "membership": "mini"
+    },
+    {
+      "id": 3,
+      "membership": "plus"
+    },
+    {
+      "id": 4,
+      "membership": "pro"
+    }
   ],
   "regions": [
     {
-      "id" : 1,
-      "name" : "臺北市"
+      "id": 1,
+      "name": "臺北市"
     },
     {
-      "id" : 2,
-      "name" : "新北市"
+      "id": 2,
+      "name": "新北市"
     },
     {
-      "id" : 3,
-      "name" : "基隆市"
+      "id": 3,
+      "name": "基隆市"
     },
     {
-      "id" : 4,
-      "name" : "新竹市"
+      "id": 4,
+      "name": "新竹市"
     },
     {
-      "id" : 5,
-      "name" : "桃園市"
+      "id": 5,
+      "name": "桃園市"
     },
     {
-      "id" : 6,
-      "name" : "新竹縣"
+      "id": 6,
+      "name": "新竹縣"
     },
     {
-      "id" : 7,
-      "name" : "宜蘭縣"
+      "id": 7,
+      "name": "宜蘭縣"
     },
     {
-      "id" : 8,
-      "name" : "臺中市"
+      "id": 8,
+      "name": "臺中市"
     },
     {
-      "id" : 9,
-      "name" : "苗栗縣"
+      "id": 9,
+      "name": "苗栗縣"
     },
     {
-      "id" : 10,
-      "name" : "彰化縣"
+      "id": 10,
+      "name": "彰化縣"
     },
     {
-      "id" : 11,
-      "name" : "南投縣"
+      "id": 11,
+      "name": "南投縣"
     },
     {
-      "id" : 12,
-      "name" : "雲林縣"
+      "id": 12,
+      "name": "雲林縣"
     },
     {
-      "id" : 13,
-      "name" : "高雄市"
+      "id": 13,
+      "name": "高雄市"
     },
     {
-      "id" : 14,
-      "name" : "臺南市"
+      "id": 14,
+      "name": "臺南市"
     },
     {
-      "id" : 15,
-      "name" : "嘉義市"
+      "id": 15,
+      "name": "嘉義市"
     },
     {
-      "id" : 16,
-      "name" : "嘉義縣"
+      "id": 16,
+      "name": "嘉義縣"
     },
     {
-      "id" : 17,
-      "name" : "屏東縣"
+      "id": 17,
+      "name": "屏東縣"
     },
     {
-      "id" : 18,
-      "name" : "澎湖縣"
+      "id": 18,
+      "name": "澎湖縣"
     },
     {
-      "id" : 19,
-      "name" : "花蓮縣"
+      "id": 19,
+      "name": "花蓮縣"
     },
     {
-      "id" : 20,
-      "name" : "臺東縣"
+      "id": 20,
+      "name": "臺東縣"
     },
     {
-      "id" : 21,
-      "name" : "金門縣"
+      "id": 21,
+      "name": "金門縣"
     },
     {
-      "id" : 22,
-      "name" : "連江縣"
+      "id": 22,
+      "name": "連江縣"
     }
   ],
   "exhibitions_categories": [
@@ -558,48 +688,120 @@
   ],
   "gotcha_goods": [
     {
-        "id": 1,
-        "name": "玩偶小吊飾",
-        "stock": 10,
-        "description": "玩偶小吊飾描述",
-        "image": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Goods/goods-1.png"
+      "id": 1,
+      "name": "好朋友玩偶小吊飾",
+      "stock": 10,
+      "description": "精緻可愛的玩偶小吊飾，輕巧方便攜帶，為您的日常生活增添溫暖的陪伴。適合掛在包包、鑰匙圈或手機上，展現個人風格。",
+      "image": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Goods/goods-1.png",
+      "color": "bg-official-good-1",
+      "features": [
+        {
+          "title": "高質感材質",
+          "content": "採用柔軟絨毛材質，觸感舒適且耐用。"
+        },
+        {
+          "title": "精緻造型",
+          "content": "立體造型細節生動，完美展現角色特色。"
+        },
+        {
+          "title": "輕巧便攜",
+          "content": "小巧設計，方便掛在各種物品上，隨時陪伴您。"
+        }
+      ],
+      "usage": "適合裝飾包包、鑰匙圈，或作為貼心的小禮物送給朋友。",
+      "offer": "現在入手，讓可愛的小吊飾陪伴您的每一天！"
     },
     {
-        "id": 2,
-        "name": "兩用造型頸枕",
-        "stock": 10,
-        "description": "兩用造型頸枕描述",
-        "image": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Goods/goods-2.png"
+      "id": 2,
+      "name": "厭世上班族兩用造型頸枕",
+      "stock": 10,
+      "description": "結合舒適與實用的兩用造型頸枕，提供極致支撐力，讓您旅途中輕鬆休息。獨特變形設計，輕鬆切換抱枕與頸枕模式。",
+      "image": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Goods/goods-2.png",
+      "color": "bg-official-good-2",
+      "features": [
+        {
+          "title": "人體工學設計",
+          "content": "貼合頸部曲線，提供良好的支撐與舒適感。"
+        },
+        {
+          "title": "兩用變形",
+          "content": "可快速變形為抱枕或頸枕，滿足不同需求。"
+        },
+        {
+          "title": "柔軟透氣",
+          "content": "親膚材質，長時間使用也能保持乾爽舒適。"
+        }
+      ],
+      "usage": "適合旅行、午休、長途搭車，隨時享受舒適支撐。",
+      "offer": "快來體驗變形頸枕的舒適魔法，讓您的旅途更輕鬆！"
     },
     {
-        "id": 3,
-        "name": "繽紛浴巾",
-        "stock": 10,
-        "description": "繽紛浴巾以絕佳觸感與高品質設計，為您打造沐浴後的極致享受。輕柔的材質包裹身體，不僅迅速吸水，還讓每一次接觸都如雲朵般輕盈。",
-        "image": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Goods/goods-3.png"
+      "id": 3,
+      "name": "好朋友繽紛浴巾",
+      "stock": 10,
+      "description": "繽紛浴巾以絕佳觸感與高品質設計，為您打造沐浴後的極致享受。輕柔的材質包裹身體，不僅迅速吸水，還讓每一次接觸都如雲朵般輕盈。",
+      "image": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Goods/goods-3.png",
+      "color": "bg-official-good-3",
+      "features": [
+        {
+          "title": "高吸水力",
+          "content": "精選細緻纖維，快速吸乾水分，讓您時刻保持清爽。"
+        },
+        {
+          "title": "柔軟親膚",
+          "content": "適合各種肌膚，溫和呵護敏感肌膚也不在話下。"
+        },
+        {
+          "title": "繽紛設計",
+          "content": "多款明亮色彩，為您的浴室增添活力與時尚感。"
+        }
+      ],
+      "usage": "居家沐浴、運動後清潔、泳池派對必備，甚至是送禮的首選！",
+      "offer": "立即擁有繽紛浴巾，用色彩與柔軟點綴您的生活！"
     },
     {
-        "id": 4,
-        "name": "硅藻土杯墊",
-        "stock": 10,
-        "description": "硅藻土杯墊描述",
-        "image": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Goods/goods-4.png"
+      "id": 4,
+      "name": "阿喵硅藻土杯墊",
+      "stock": 10,
+      "description": "快速吸水的硅藻土杯墊，保持桌面乾爽清潔，簡約設計融入各種家居風格。",
+      "image": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Goods/goods-4.png",
+      "color": "bg-official-good-4",
+      "features": [
+        { "title": "高效吸水", "content": "硅藻土材質能迅速吸收水分，防止桌面濕滑。" },
+        { "title": "環保耐用", "content": "天然材料製成，可長時間使用且易於清潔。" }
+      ],
+      "usage": "適用於各種杯具，特別適合辦公室與居家使用。",
+      "offer": "讓您的桌面保持乾爽清潔，現在就擁有您的硅藻土杯墊！"
     },
     {
-        "id": 5,
-        "name": "桌曆",
-        "stock": 10,
-        "description": "桌曆描述",
-        "image": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Goods/goods-5.png"
+      "id": 5,
+      "name": "2025桌曆",
+      "stock": 10,
+      "description": "簡約風格桌曆，幫助您有條理地規劃每一天，提升工作與生活效率。",
+      "image": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Goods/goods-5.png",
+      "color": "bg-official-good-5",
+      "features": [
+        { "title": "清晰易讀", "content": "大字體與明確標示，方便快速查看日期與行程。" },
+        { "title": "穩固耐用", "content": "高品質紙張與牢固支架，長時間使用不變形。" }
+      ],
+      "usage": "適用於辦公室、書房、居家桌面，幫助管理每日行程。",
+      "offer": "用這款精美桌曆，讓每一天的計劃都更清晰明確！"
     },
     {
-        "id": 6,
-        "name": "刺繡絨毛束口袋",
-        "stock": 10,
-        "description": "刺繡絨毛束口袋描述",
-        "image": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Goods/goods-6.png"
+      "id": 6,
+      "name": "刺繡絨毛束口袋",
+      "stock": 10,
+      "description": "高質感刺繡絨毛束口袋，觸感柔軟，既可作為收納袋，也能作為時尚配件，為日常穿搭增添亮點。",
+      "image": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Goods/goods-6.png",
+      "color": "bg-official-good-6",
+      "features": [
+        { "title": "柔軟親膚", "content": "高級絨毛材質，手感舒適且輕盈。" },
+        { "title": "精緻刺繡", "content": "獨特刺繡圖案，展現細緻工藝。" }
+      ],
+      "usage": "適用於日常小物收納，或搭配穿搭作為時尚配件。",
+      "offer": "限量款刺繡絨毛束口袋，為您的生活增添質感！"
     }
-],
+  ],
   "wishing_fountain": [
     {
       "id": 1,
@@ -623,14 +825,17 @@
       "description": ""
     }
   ],
- "exhibition_pk": [
-      {
+  "exhibition_pk": [
+    {
       "id": 1,
       "title": "沈浸式香氛體驗",
       "imageSrc": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Wish/wish-lg-3.jpeg",
       "regionId": 1,
       "dateRange": "2025/8/15 - 2025/12/15",
-      "tags": ["香氛", "療癒"],
+      "tags": [
+        "香氛",
+        "療癒"
+      ],
       "highlights": "用香氣描繪生活的精緻,將質感化為觸手可及的感動。",
       "experiences": [
         "感官漫遊-穿越花香、木質與清新調性的香氣迷宮，發現最適合你的專屬味道。",
@@ -645,15 +850,17 @@
       "imageSrc": "https://raw.githubusercontent.com/ExpoAnyGate/E.A.G-primary/refs/heads/main/public/Wish/wish-lg-4.jpeg",
       "regionId": 8,
       "dateRange": "2025/09/01 - 2025/11/10",
-      "tags": ["數位", "AI"],
+      "tags": [
+        "數位",
+        "AI"
+      ],
       "highlights": "光影交錯，穿越數位與現實邊界，探索藝術的無限可能。",
       "experiences": [
         "互動光影空間 - 置身光影變幻的場域，與動態藝術互動，感受科技與美學的交融。",
         "AI 藝術創作 - 體驗 AI 創作的魅力，讓人工智慧根據你的筆觸生成獨一無二的畫作。",
         "沉浸式音樂劇場 - 音樂與影像同步變化，打造多感官體驗，帶你進入藝術的奇幻世界。"
       ],
-      "features":
-        "結合 AI、投影技術與聲光效果，重新定義現代數位藝術，創造一場跨界視覺饗宴。"
+      "features": "結合 AI、投影技術與聲光效果，重新定義現代數位藝術，創造一場跨界視覺饗宴。"
     }
   ],
   "pk_vote": [
@@ -668,7 +875,6 @@
       "exhibition_pkId": 1
     }
   ],
-
   "ranking": [
     {
       "id": 1,
